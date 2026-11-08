@@ -1,0 +1,148 @@
+# finspider configuration
+# Every number that affects a score or verdict lives here. Edit freely.
+
+data:
+  history_years: 10          # how many fiscal years to keep for trends/charts
+  min_years: 6               # if yfinance has fewer years than this for a field, try Screener.in
+  cagr_years: 5              # period for revenue / profit / EPS CAGR
+  valuation_avg_years: 5     # window for "vs N-year average" valuation comparisons
+
+cache:
+  dir: .cache
+  yfinance_ttl_hours: 24
+  screener_ttl_hours: 168    # 7 days
+
+verification:
+  # A figure is "verified" when an independent second source agrees within this tolerance.
+  # Figures whose sources disagree are shown in the report but never used for scoring.
+  tolerance_pct: 2.0
+  compare_fields: [revenue, net_income, net_income_incl_nci, total_equity, total_assets, ocf, eps,
+                   current_assets, current_liabilities, pretax_income]
+
+sec:
+  enabled: true              # US listings: official 10-K figures from SEC EDGAR
+  # SEC asks automated clients to identify themselves; add your contact if you run this a lot.
+  user_agent: "finspider research tool (personal, non-commercial)"
+  ttl_hours: 168
+
+screener:
+  enabled: true              # Indian listings (.NS / .BO): primary source, cross-checked with Yahoo
+  base_url: https://www.screener.in
+  prefer_consolidated: true
+  min_delay_seconds: 3.0     # polite delay between requests
+  timeout_seconds: 20
+  max_retries: 3
+  user_agent: "finspider/0.1 (personal research tool)"
+
+resolver:
+  # When one company has several listings, prefer these exchanges (in order).
+  preferred_exchanges: [NSI, BSE, NMS, NYQ, NGM, NCM, ASE, LSE, TOR]
+  max_candidates: 8
+
+# Data neither yfinance nor Screener publishes (e.g. bank capital adequacy).
+# Add per-ticker values here and they will be used in scoring.
+manual_inputs: {}
+# Example (take the figure from the bank's latest results / Basel III disclosure):
+# manual_inputs:
+#   HDFCBANK.NS:
+#     car_pct: 19.5          # Capital adequacy ratio, %
+#     gnpa_pct: 1.3          # optional: overrides the scraped value
+#     nnpa_pct: 0.4
+
+sector:
+  # A company is scored with the "financial" profile if its yfinance industry
+  # contains any of these phrases (case-insensitive).
+  financial_industries: ["bank", "credit services", "mortgage finance", "financial conglomerates"]
+
+# Each metric is scored 0-10 by straight-line interpolation between `bad` (0) and
+# `good` (10). If good > bad, higher is better; if good < bad, lower is better.
+thresholds:
+  current_ratio:      {good: 2.0,  bad: 0.9}
+  quick_ratio:        {good: 1.5,  bad: 0.6}
+  debt_to_equity:     {good: 0.1,  bad: 1.5}
+  interest_coverage:  {good: 10,   bad: 1.5}
+  roe:                {good: 22,   bad: 8}       # %
+  roce:               {good: 25,   bad: 8}       # %
+  net_margin:         {good: 18,   bad: 3}       # %
+  operating_margin:   {good: 25,   bad: 5}       # %
+  revenue_cagr:       {good: 15,   bad: 0}       # %
+  profit_cagr:        {good: 18,   bad: 0}       # %
+  eps_cagr:           {good: 18,   bad: 0}       # %
+  ocf_to_net_profit:  {good: 1.0,  bad: 0.5}     # x, summed over the CAGR window
+  fcf_positive_years: {good: 5,    bad: 2}       # out of last 5 years
+  fcf_margin:         {good: 15,   bad: 0}       # %
+  pe:                 {good: 15,   bad: 50}
+  pb:                 {good: 2,    bad: 10}
+  peg:                {good: 1.0,  bad: 3.0}
+  pe_vs_avg:          {good: -20,  bad: 30}      # % premium (+) / discount (-) to 5y average
+  pb_vs_avg:          {good: -20,  bad: 30}
+  peg_vs_avg:         {good: -20,  bad: 30}
+  # banks / NBFCs
+  nim:                {good: 4.0,  bad: 2.0}     # % (net interest income / avg total assets)
+  roa:                {good: 1.8,  bad: 0.6}     # %
+  gnpa:               {good: 1.5,  bad: 6.0}     # %
+  nnpa:               {good: 0.5,  bad: 3.0}     # %
+  car:                {good: 18,   bad: 11.5}    # %
+
+# Flag shown in the ratio table, based on the 0-10 metric score.
+flags:
+  good_at_or_above: 7
+  bad_below: 4
+
+# Scoring profiles. Category weights are relative (they're normalised), and so are
+# the metric weights inside each category. Categories with no data are skipped
+# and the remaining weights are re-normalised.
+profiles:
+  default:
+    liquidity:     {weight: 10, metrics: {current_ratio: 1, quick_ratio: 1}}
+    leverage:      {weight: 15, metrics: {debt_to_equity: 1, interest_coverage: 1}}
+    profitability: {weight: 25, metrics: {roe: 1, roce: 1, net_margin: 0.5, operating_margin: 0.5}}
+    growth:        {weight: 20, metrics: {revenue_cagr: 1, profit_cagr: 1, eps_cagr: 1}}
+    cash_flow:     {weight: 15, metrics: {ocf_to_net_profit: 1, fcf_positive_years: 1, fcf_margin: 1}}
+    valuation:     {weight: 15, metrics: {pe: 1, pb: 0.5, peg: 1, pe_vs_avg: 1, pb_vs_avg: 0.5, peg_vs_avg: 0.5}}
+  financial:
+    asset_quality: {weight: 25, metrics: {gnpa: 1, nnpa: 1}}
+    capital:       {weight: 10, metrics: {car: 1}}
+    profitability: {weight: 25, metrics: {roa: 1, roe: 1, nim: 1}}
+    growth:        {weight: 20, metrics: {revenue_cagr: 1, profit_cagr: 1, eps_cagr: 1}}
+    valuation:     {weight: 20, metrics: {pe: 0.5, pb: 1, peg: 1, pe_vs_avg: 0.5, pb_vs_avg: 1, peg_vs_avg: 0.5}}
+
+# Red flags. `critical` ones can cap the verdict (see verdict.cap_*).
+red_flags:
+  net_loss_latest_year:     {severity: critical}
+  negative_equity:          {severity: critical}
+  negative_ocf_years:       {severity: critical, min_years: 2}         # in the last 5 years
+  low_cash_conversion:      {severity: critical, below: 0.6}           # OCF / net profit
+  high_debt_to_equity:      {severity: critical, above: 2.0}
+  low_interest_coverage:    {severity: critical, below: 2.0}
+  revenue_decline:          {severity: warning, below: 0}              # revenue CAGR %
+  profit_decline:           {severity: warning, below: 0}              # profit CAGR %
+  expensive_vs_history:     {severity: warning, above: 50}             # P/E premium to avg, %
+  high_gnpa:                {severity: critical, above: 5.0}
+  high_nnpa:                {severity: critical, above: 2.0}
+  rising_gnpa:              {severity: warning, above: 0.5}            # pp rise vs 4 quarters ago
+  low_car:                  {severity: critical, below: 12.0}
+
+verdict:
+  strong_accumulate: 8.0     # overall score >= this
+  accumulate: 6.5
+  hold: 5.0                  # below this -> Avoid
+  cap_one_critical: Accumulate   # best verdict allowed with 1 critical red flag
+  cap_two_critical: Hold         # ... with 2 or more
+  min_coverage: 0.5          # below this share of scored metrics, verdict is marked low-confidence
+  major_category_weight: 0.2 # a category carrying >= 20% of the weight is "major"...
+  cap_missing_major_category: Accumulate   # ...and if it has no data, the verdict can't exceed this
+
+report:
+  out_dir: reports
+  pdf: true
+
+# Pre-built company library for the dashboard search (build_library.py / weekly GitHub Action)
+library:
+  indices: [nifty50, sp100]
+  # Indian companies need a second source to agree: include only if at most this many
+  # figures disagree (last 4 years) and at least min_verified figures were confirmed.
+  max_mismatches: 2
+  min_verified: 8
+  # how long a previous report may be kept if this week's refresh fails
+  keep_stale_days: 35

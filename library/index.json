@@ -1,0 +1,1392 @@
+{
+ "updated": "2026-11-09",
+ "complete": true,
+ "indices": [
+  "Nifty 50",
+  "S&P 100"
+ ],
+ "companies": [
+  {
+   "t": "MMM",
+   "n": "3M Company",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.9,
+   "f": "reports/MMM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ABT",
+   "n": "Abbott Laboratories",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/ABT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ABBV",
+   "n": "AbbVie Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.4,
+   "f": "reports/ABBV.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ACN",
+   "n": "Accenture plc",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.9,
+   "f": "reports/ACN.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ADANIPORTS.NS",
+   "n": "Adani Ports and Special Economic Zone Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 7.1,
+   "f": "reports/ADANIPORTS_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "ADBE",
+   "n": "Adobe Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.2,
+   "f": "reports/ADBE.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AMD",
+   "n": "Advanced Micro Devices, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/AMD.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GOOG",
+   "n": "Alphabet Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 10.0,
+   "f": "reports/GOOG.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MO",
+   "n": "Altria Group, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.5,
+   "f": "reports/MO.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AMZN",
+   "n": "Amazon.com, Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.6,
+   "f": "reports/AMZN.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AXP",
+   "n": "American Express Company",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 9.0,
+   "f": "reports/AXP.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AMT",
+   "n": "American Tower Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/AMT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AMGN",
+   "n": "Amgen Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.3,
+   "f": "reports/AMGN.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "APOLLOHOSP.NS",
+   "n": "Apollo Hospitals Enterprise Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 6.7,
+   "f": "reports/APOLLOHOSP_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "AAPL",
+   "n": "Apple Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.8,
+   "f": "reports/AAPL.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AMAT",
+   "n": "Applied Materials, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.6,
+   "f": "reports/AMAT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ANET",
+   "n": "Arista Networks, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.3,
+   "f": "reports/ANET.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ASIANPAINT.NS",
+   "n": "Asian Paints Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 7.7,
+   "f": "reports/ASIANPAINT_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "T",
+   "n": "AT&T Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/T.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BAC",
+   "n": "Bank of America Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.3,
+   "f": "reports/BAC.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BRK-B",
+   "n": "Berkshire Hathaway Inc.",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 5.0,
+   "f": "reports/BRK-B.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BEL.NS",
+   "n": "Bharat Electronics Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 7.9,
+   "f": "reports/BEL_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "BLK",
+   "n": "BlackRock, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.3,
+   "f": "reports/BLK.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BKNG",
+   "n": "Booking Holdings Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 8.4,
+   "f": "reports/BKNG.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BMY",
+   "n": "Bristol-Myers Squibb Company",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.8,
+   "f": "reports/BMY.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "AVGO",
+   "n": "Broadcom Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.1,
+   "f": "reports/AVGO.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "COF",
+   "n": "Capital One Financial Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.8,
+   "f": "reports/COF.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "CAT",
+   "n": "Caterpillar Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.6,
+   "f": "reports/CAT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "CVX",
+   "n": "Chevron Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.4,
+   "f": "reports/CVX.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "CIPLA.NS",
+   "n": "Cipla Limited",
+   "x": "Nifty 50",
+   "v": "Hold",
+   "s": 6.2,
+   "f": "reports/CIPLA_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "CSCO",
+   "n": "Cisco Systems, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.5,
+   "f": "reports/CSCO.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "C",
+   "n": "Citigroup Inc.",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 2.9,
+   "f": "reports/C.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "CMCSA",
+   "n": "Comcast Corporation",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 8.0,
+   "f": "reports/CMCSA.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "COP",
+   "n": "ConocoPhillips",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.8,
+   "f": "reports/COP.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "COST",
+   "n": "Costco Wholesale Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/COST.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "CVS",
+   "n": "CVS Health Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 3.6,
+   "f": "reports/CVS.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "DHR",
+   "n": "Danaher Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.1,
+   "f": "reports/DHR.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "DE",
+   "n": "Deere & Company",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.6,
+   "f": "reports/DE.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "DELL",
+   "n": "Dell Technologies Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.7,
+   "f": "reports/DELL.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "DUK",
+   "n": "Duke Energy Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.4,
+   "f": "reports/DUK.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "EICHERMOT.NS",
+   "n": "Eicher Motors Limited",
+   "x": "Nifty 50",
+   "v": "Strong Accumulate",
+   "s": 8.9,
+   "f": "reports/EICHERMOT_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "LLY",
+   "n": "Eli Lilly and Company",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.7,
+   "f": "reports/LLY.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "EMR",
+   "n": "Emerson Electric Co.",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 3.7,
+   "f": "reports/EMR.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "FDX",
+   "n": "FedEx Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.4,
+   "f": "reports/FDX.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GE",
+   "n": "GE Aerospace",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.7,
+   "f": "reports/GE.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GEV",
+   "n": "GE Vernova Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.4,
+   "f": "reports/GEV.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GD",
+   "n": "General Dynamics Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.9,
+   "f": "reports/GD.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GM",
+   "n": "General Motors Company",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 2.3,
+   "f": "reports/GM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GILD",
+   "n": "Gilead Sciences, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.2,
+   "f": "reports/GILD.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GRASIM.NS",
+   "n": "Grasim Industries Limited",
+   "x": "Nifty 50",
+   "v": "Avoid",
+   "s": 1.6,
+   "f": "reports/GRASIM_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "HINDALCO.NS",
+   "n": "Hindalco Industries Limited",
+   "x": "Nifty 50",
+   "v": "Hold",
+   "s": 5.4,
+   "f": "reports/HINDALCO_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "HINDUNILVR.NS",
+   "n": "Hindustan Unilever Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 7.6,
+   "f": "reports/HINDUNILVR_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "INTC",
+   "n": "Intel Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 2.9,
+   "f": "reports/INTC.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "IBM",
+   "n": "International Business Machines Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.2,
+   "f": "reports/IBM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "INTU",
+   "n": "Intuit Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.3,
+   "f": "reports/INTU.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ISRG",
+   "n": "Intuitive Surgical, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.6,
+   "f": "reports/ISRG.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ITC.NS",
+   "n": "ITC Limited",
+   "x": "Nifty 50",
+   "v": "Strong Accumulate",
+   "s": 8.5,
+   "f": "reports/ITC_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "JNJ",
+   "n": "Johnson & Johnson",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.2,
+   "f": "reports/JNJ.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "JPM",
+   "n": "JPMorgan Chase & Co.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.2,
+   "f": "reports/JPM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "JSWSTEEL.NS",
+   "n": "JSW Steel Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 7.2,
+   "f": "reports/JSWSTEEL_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "LRCX",
+   "n": "Lam Research Corporation",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.8,
+   "f": "reports/LRCX.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "LT.NS",
+   "n": "Larsen & Toubro Limited",
+   "x": "Nifty 50",
+   "v": "Avoid",
+   "s": 4.9,
+   "f": "reports/LT_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "LIN",
+   "n": "Linde plc",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.8,
+   "f": "reports/LIN.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "LMT",
+   "n": "Lockheed Martin Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.7,
+   "f": "reports/LMT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "LOW",
+   "n": "Lowe's Companies, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/LOW.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MA",
+   "n": "Mastercard Incorporated",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.5,
+   "f": "reports/MA.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MAXHEALTH.NS",
+   "n": "Max Healthcare Institute Limited",
+   "x": "Nifty 50",
+   "v": "Hold",
+   "s": 6.1,
+   "f": "reports/MAXHEALTH_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "MCD",
+   "n": "McDonald's Corporation",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.9,
+   "f": "reports/MCD.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MDT",
+   "n": "Medtronic plc",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/MDT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MRK",
+   "n": "Merck & Co., Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.8,
+   "f": "reports/MRK.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "META",
+   "n": "Meta Platforms, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.5,
+   "f": "reports/META.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MU",
+   "n": "Micron Technology, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.6,
+   "f": "reports/MU.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MSFT",
+   "n": "Microsoft Corporation",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.0,
+   "f": "reports/MSFT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MDLZ",
+   "n": "Mondelez International, Inc.",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.5,
+   "f": "reports/MDLZ.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "MS",
+   "n": "Morgan Stanley",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.0,
+   "f": "reports/MS.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "NFLX",
+   "n": "Netflix, Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.5,
+   "f": "reports/NFLX.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "NEE",
+   "n": "NextEra Energy, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.5,
+   "f": "reports/NEE.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "NVDA",
+   "n": "NVIDIA Corporation",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.6,
+   "f": "reports/NVDA.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ORCL",
+   "n": "Oracle Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.3,
+   "f": "reports/ORCL.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "PLTR",
+   "n": "Palantir Technologies Inc.",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.9,
+   "f": "reports/PLTR.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "PANW",
+   "n": "Palo Alto Networks, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.4,
+   "f": "reports/PANW.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "PEP",
+   "n": "PepsiCo, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.1,
+   "f": "reports/PEP.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "PFE",
+   "n": "Pfizer Inc.",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.1,
+   "f": "reports/PFE.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "PM",
+   "n": "Philip Morris International Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.6,
+   "f": "reports/PM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "QCOM",
+   "n": "QUALCOMM Incorporated",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 8.2,
+   "f": "reports/QCOM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "RELIANCE.NS",
+   "n": "Reliance Industries Limited",
+   "x": "Nifty 50",
+   "v": "Hold",
+   "s": 5.2,
+   "f": "reports/RELIANCE_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "RTX",
+   "n": "RTX Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.5,
+   "f": "reports/RTX.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "CRM",
+   "n": "Salesforce, Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.1,
+   "f": "reports/CRM.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "SNDK",
+   "n": "Sandisk Corporation",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 9.1,
+   "f": "reports/SNDK.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "NOW",
+   "n": "ServiceNow, Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.6,
+   "f": "reports/NOW.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "SBUX",
+   "n": "Starbucks Corporation",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.2,
+   "f": "reports/SBUX.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "SUNPHARMA.NS",
+   "n": "Sun Pharmaceutical Industries Limited",
+   "x": "Nifty 50",
+   "v": "Strong Accumulate",
+   "s": 8.5,
+   "f": "reports/SUNPHARMA_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "TMUS",
+   "n": "T-Mobile US, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.1,
+   "f": "reports/TMUS.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "TCS.NS",
+   "n": "Tata Consultancy Services Limited",
+   "x": "Nifty 50",
+   "v": "Strong Accumulate",
+   "s": 8.8,
+   "f": "reports/TCS_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "TATACONSUM.NS",
+   "n": "Tata Consumer Products Limited",
+   "x": "Nifty 50",
+   "v": "Hold",
+   "s": 5.8,
+   "f": "reports/TATACONSUM_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "TATASTEEL.NS",
+   "n": "Tata Steel Limited",
+   "x": "Nifty 50",
+   "v": "Avoid",
+   "s": 3.9,
+   "f": "reports/TATASTEEL_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "TSLA",
+   "n": "Tesla, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/TSLA.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "TXN",
+   "n": "Texas Instruments Incorporated",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.2,
+   "f": "reports/TXN.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BNY",
+   "n": "The Bank of New York Mellon Corporation",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.9,
+   "f": "reports/BNY.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "BA",
+   "n": "The Boeing Company",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.2,
+   "f": "reports/BA.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "SCHW",
+   "n": "The Charles Schwab Corporation",
+   "x": "S&P 100",
+   "v": "Strong Accumulate",
+   "s": 9.0,
+   "f": "reports/SCHW.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "KO",
+   "n": "The Coca-Cola Company",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.7,
+   "f": "reports/KO.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "GS",
+   "n": "The Goldman Sachs Group, Inc.",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.8,
+   "f": "reports/GS.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "HD",
+   "n": "The Home Depot, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.6,
+   "f": "reports/HD.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "PG",
+   "n": "The Procter & Gamble Company",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.1,
+   "f": "reports/PG.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "SO",
+   "n": "The Southern Company",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.6,
+   "f": "reports/SO.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "DIS",
+   "n": "The Walt Disney Company",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.7,
+   "f": "reports/DIS.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "TMO",
+   "n": "Thermo Fisher Scientific Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.7,
+   "f": "reports/TMO.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "TITAN.NS",
+   "n": "Titan Company Limited",
+   "x": "Nifty 50",
+   "v": "Hold",
+   "s": 5.4,
+   "f": "reports/TITAN_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "TRENT.NS",
+   "n": "Trent Limited",
+   "x": "Nifty 50",
+   "v": "Accumulate",
+   "s": 7.2,
+   "f": "reports/TRENT_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "USB",
+   "n": "U.S. Bancorp",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.1,
+   "f": "reports/USB.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "UBER",
+   "n": "Uber Technologies, Inc.",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 7.6,
+   "f": "reports/UBER.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "ULTRACEMCO.NS",
+   "n": "UltraTech Cement Limited",
+   "x": "Nifty 50",
+   "v": "Avoid",
+   "s": 4.8,
+   "f": "reports/ULTRACEMCO_NS.json",
+   "d": "2026-11-09",
+   "src": "Screener.in"
+  },
+  {
+   "t": "UNP",
+   "n": "Union Pacific Corporation",
+   "x": "S&P 100",
+   "v": "Accumulate",
+   "s": 6.9,
+   "f": "reports/UNP.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "UPS",
+   "n": "United Parcel Service, Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.0,
+   "f": "reports/UPS.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "UNH",
+   "n": "UnitedHealth Group Incorporated",
+   "x": "S&P 100",
+   "v": "Avoid",
+   "s": 4.1,
+   "f": "reports/UNH.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "VZ",
+   "n": "Verizon Communications Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.6,
+   "f": "reports/VZ.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "V",
+   "n": "Visa Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 6.1,
+   "f": "reports/V.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "WMT",
+   "n": "Walmart Inc.",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.0,
+   "f": "reports/WMT.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  },
+  {
+   "t": "WFC",
+   "n": "Wells Fargo & Company",
+   "x": "S&P 100",
+   "v": "Hold",
+   "s": 5.8,
+   "f": "reports/WFC.json",
+   "d": "2026-11-09",
+   "src": "SEC EDGAR"
+  }
+ ],
+ "skipped": [
+  {
+   "t": "ADANIENT.NS",
+   "n": "Adani Enterprises",
+   "x": "Nifty 50",
+   "why": "3 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "AXISBANK.NS",
+   "n": "Axis Bank",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "BAJAJ-AUTO.NS",
+   "n": "Bajaj Auto",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "BAJFINANCE.NS",
+   "n": "Bajaj Finance",
+   "x": "Nifty 50",
+   "why": "5 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "BAJAJFINSV.NS",
+   "n": "Bajaj Finserv",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "BHARTIARTL.NS",
+   "n": "Bharti Airtel",
+   "x": "Nifty 50",
+   "why": "3 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "BSE.NS",
+   "n": "BSE",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "COALINDIA.NS",
+   "n": "Coal India",
+   "x": "Nifty 50",
+   "why": "3 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "DRREDDY.NS",
+   "n": "Dr. Reddy's Laboratories",
+   "x": "Nifty 50",
+   "why": "5 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "ETERNAL.NS",
+   "n": "Eternal",
+   "x": "Nifty 50",
+   "why": "3 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "XOM",
+   "n": "ExxonMobil",
+   "x": "S&P 100",
+   "why": "only 0 figures could be cross-checked against a second source"
+  },
+  {
+   "t": "HCLTECH.NS",
+   "n": "HCLTech",
+   "x": "Nifty 50",
+   "why": "32 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "HDFCBANK.NS",
+   "n": "HDFC Bank",
+   "x": "Nifty 50",
+   "why": "29 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "HDFCLIFE.NS",
+   "n": "HDFC Life",
+   "x": "Nifty 50",
+   "why": "7 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "ICICIBANK.NS",
+   "n": "ICICI Bank",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "INDIGO.NS",
+   "n": "IndiGo",
+   "x": "Nifty 50",
+   "why": "3 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "INFY.NS",
+   "n": "Infosys",
+   "x": "Nifty 50",
+   "why": "9 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "JIOFIN.NS",
+   "n": "Jio Financial Services",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "KOTAKBANK.NS",
+   "n": "Kotak Mahindra Bank",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "M&M.NS",
+   "n": "Mahindra & Mahindra",
+   "x": "Nifty 50",
+   "why": "7 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "MARUTI.NS",
+   "n": "Maruti Suzuki",
+   "x": "Nifty 50",
+   "why": "5 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "NESTLEIND.NS",
+   "n": "Nestlé India",
+   "x": "Nifty 50",
+   "why": "only 0 figures could be cross-checked against a second source"
+  },
+  {
+   "t": "NTPC.NS",
+   "n": "NTPC",
+   "x": "Nifty 50",
+   "why": "3 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "ONGC.NS",
+   "n": "Oil and Natural Gas Corporation",
+   "x": "Nifty 50",
+   "why": "6 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "POWERGRID.NS",
+   "n": "Power Grid",
+   "x": "Nifty 50",
+   "why": "7 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "SBILIFE.NS",
+   "n": "SBI Life Insurance Company",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "SHRIRAMFIN.NS",
+   "n": "Shriram Finance",
+   "x": "Nifty 50",
+   "why": "5 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "SBIN.NS",
+   "n": "State Bank of India",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "TMPV.NS",
+   "n": "Tata Motors Passenger Vehicles",
+   "x": "Nifty 50",
+   "why": "7 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  },
+  {
+   "t": "TECHM.NS",
+   "n": "Tech Mahindra",
+   "x": "Nifty 50",
+   "why": "4 figures differ between Screener.in and Yahoo Finance by more than 2.0%"
+  }
+ ]
+}

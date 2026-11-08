@@ -7,7 +7,9 @@
 
   - New paper:   add an entry to `papers` and put its PDF in /papers
   - New post:    add an entry to `writing` (newest first)
-  - Anything else (internship, certification, project, award):
+  - New project: add an entry to `projects`. A project can show a live
+                 demo in its card (see the finspider entry).
+  - Anything else (internship, certification, award):
                  add an entry to `more`. The "More" section appears
                  as soon as it has at least one entry.
 
@@ -171,6 +173,102 @@ window.SITE = {
         }
       ],
       tags: ["Asset allocation", "Fund comparison", "Gold & silver ETFs", "Risk-adjusted returns"]
+    }
+  ],
+
+  // Tools and builds. Each project opens into its own page, like a paper.
+  // `demo` (optional) embeds a live web component on that page; `companies` adds a switcher.
+  projects: [
+    {
+      id: "finspider",
+      title: "finspider: Reading Company Financial Statements with a Fully Sourced Scoring Model",
+      shortTitle: "finspider",
+      kind: "Project",
+      date: "November 2026",
+      area: "Fundamental analysis",
+      authors: ["Manisha Hebbar"],
+      question: "Can a company's annual financial statements be turned into a transparent long-term verdict, where every number can be traced back to the filing it came from?",
+      headline: "A Python tool that reads up to 10 years of a company's statements from official filings, cross-checks every figure against a second source, scores its financial health out of 10, and shows each calculation step by step. Search any of 120 companies, or request another live.",
+      abstract: "finspider takes a company name and assembles its income statement, balance sheet and cash flow from official sources: SEC EDGAR 10-K filings for US companies, and Screener.in (compiled from BSE/NSE filings) for Indian companies. Every figure is cross-checked against Yahoo Finance; figures where the two sources disagree by more than 2% are shown but never used for scoring. It computes 20+ ratios covering liquidity, debt, returns, margins, growth, cash conversion and valuation against the company's own history, scores each on a 0-10 scale against fixed thresholds, and combines them into a weighted verdict: Strong Accumulate, Accumulate, Hold or Avoid. An animated spider demonstrates the method: it walks to the statements, picks up the exact figures each ratio needs, and works out the result with its sources. This is a rules-based research tool, not investment advice.",
+      stats: [
+        { value: "120", label: "companies searchable instantly (S&P 100 and Nifty 50), refreshed every week" },
+        { value: "10 yrs", label: "of official SEC 10-K figures for US companies, each linked to its filing" },
+        { value: "±2%", label: "agreement needed between two independent sources to count a figure as verified" },
+        { value: "100%", label: "of the figures behind each score traced to a named source" }
+      ],
+      findings: [
+        "NVIDIA scores 9.6/10 (Strong Accumulate) on 10 years of SEC filings: return on equity of 101.5%, revenue growth of 66.9% a year over five years, and almost no debt (0.05x equity).",
+        "NVIDIA's P/E of 23.6x sits 62% below its own five-year average, because earnings grew faster than the share price. Its growth figures start from FY2021 revenue of $16.7B, which rose almost 13-fold by FY2026, so they describe an exceptional period.",
+        "Asian Paints scores 7.7/10 (Accumulate): strong returns (ROCE 26.4%, ROE 21.2%) and low debt (0.18x equity), held back by a P/E of 50x and slower growth (revenue 10.4% a year, profit 6.6%).",
+        "Comparing like with like matters. Screener's net profit includes the share owed to minority shareholders of subsidiaries; Yahoo's headline figure excludes it. Matching each figure to the right definition turned Grasim's ~50% gap into an exact match, and stopped its ROE being overstated (4.9%, not about 10%).",
+        "Across the 120 companies in the library, verdicts span Strong Accumulate (21), Accumulate (29), Hold (47) and Avoid (23). 29 Nifty 50 companies, including HDFC Bank and Infosys, could not be verified within 2% (mostly revenue and bank definitions that differ between sources), so they are listed as excluded rather than scored."
+      ],
+      method: [
+        { label: "Data", value: "SEC EDGAR 10-K filings (US); Screener.in, compiled from BSE/NSE filings (India)" },
+        { label: "Checks", value: "Each figure cross-checked against Yahoo Finance, like for like; within ±2% counts as verified" },
+        { label: "Library", value: "S&P 100 and Nifty 50, rebuilt every Monday by a GitHub Action; other companies run live on request" },
+        { label: "Ratios", value: "Liquidity, leverage, ROE/ROCE, margins, 5-year CAGR, cash conversion, P/E, P/B, PEG vs own history" },
+        { label: "Scoring", value: "Each ratio 0-10 against fixed thresholds; weighted by category; red flags cap the verdict" },
+        { label: "Built with", value: "Python (pandas, yfinance, requests), and a custom animated web component" }
+      ],
+      charts: [
+        {
+          type: "bars",
+          title: "Overall score, out of 10",
+          caption: "Weighted average of the category scores. Only verified or single-source figures are scored.",
+          unit: "",
+          rows: [
+            { label: "NVIDIA (Strong Accumulate)", value: 9.6 },
+            { label: "Asian Paints (Accumulate)", value: 7.7 }
+          ]
+        },
+        {
+          type: "grouped",
+          title: "Category scores, out of 10",
+          caption: "Asian Paints is strong on balance sheet and cash, weaker on valuation and growth.",
+          unit: "",
+          series: ["NVIDIA", "Asian Paints"],
+          groups: [
+            { label: "Profitability", values: [10, 8.4] },
+            { label: "Growth", values: [10, 4.8] },
+            { label: "Cash-flow quality", values: [9.2, 10] },
+            { label: "Valuation", values: [8, 4.4] }
+          ]
+        },
+        {
+          type: "bars",
+          title: "Verdicts across the 120-company library",
+          caption: "S&P 100 and Nifty 50 members whose figures could be verified, November 2026.",
+          unit: "",
+          rows: [
+            { label: "Strong Accumulate", value: 21 },
+            { label: "Accumulate", value: 29 },
+            { label: "Hold", value: 47 },
+            { label: "Avoid", value: 23 }
+          ]
+        }
+      ],
+      demo: {
+        // ?v= forces browsers to fetch the new files after an update; bump it when they change
+        script: "projects/finspider/finspider-spider.js?v=4",
+        tag: "fin-spider",
+        attrs: { src: "library/reports/NVDA.json", transparent: "" },
+        // Company search: the weekly library (Nifty 50 + S&P 100) answers instantly;
+        // anything else goes to the live API once `searchApi` is set.
+        library: "library/index.json",
+        searchApi: "",   // e.g. "https://hebbarmanisha-finspider-api.hf.space" (set after the Space is created)
+        featured: ["NVDA", "ASIANPAINT.NS", "AAPL"],
+        caption: "Search a company above. The spider reads its statements on the left, carries each figure to the scorecard web and works out the ratio below. Click any figure to open its source filing. Reports are generated on demand and not stored."
+      },
+      sources: [
+        { label: "Index members: S&P 100 (Wikipedia)", url: "https://en.wikipedia.org/wiki/S%26P_100" },
+        { label: "Index members: NIFTY 50 (Wikipedia)", url: "https://en.wikipedia.org/wiki/NIFTY_50" },
+        { label: "NVIDIA filings on SEC EDGAR", url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-K" },
+        { label: "NVIDIA Form 10-K for fiscal 2026 (filed 25 Feb 2026)", url: "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/" },
+        { label: "Asian Paints financials on Screener.in", url: "https://www.screener.in/company/ASIANPAINT/consolidated/" },
+        { label: "Cross-check: Yahoo Finance financial statements", url: "https://finance.yahoo.com/" }
+      ],
+      tags: ["Python", "Financial statements", "SEC filings", "Data verification", "Scoring model", "Data visualisation"]
     }
   ],
 

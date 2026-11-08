@@ -117,7 +117,7 @@ main {
 .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
 
 .summary {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
   border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
 }
 .summary > div { padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
@@ -151,6 +151,54 @@ main {
 }
 .btn.ghost { background: transparent; color: var(--accent); }
 .btn:hover { filter: brightness(1.08); }
+
+/* Projects: cards reuse the research card styles; the live demo sits on the project page */
+.demo { display: flex; flex-direction: column; gap: 12px; }
+.demo-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.switch { display: flex; gap: 6px; flex-wrap: wrap; }
+.switch button {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer;
+  border-radius: 99px; padding: 5px 13px; font-size: 13.5px; font-weight: 500;
+}
+.switch button:hover { border-color: var(--accent); }
+.switch button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.demo .cap { margin: 0; font-size: 13px; color: var(--muted); max-width: 80ch; }
+/* company search */
+.search { position: relative; max-width: 640px; }
+.search input {
+  width: 100%; font: inherit; font-size: 15px; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px 11px 38px;
+}
+.search input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.search .icon { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.search ul {
+  position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 6px); margin: 0; padding: 6px;
+  list-style: none; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.18); max-height: 360px; overflow-y: auto;
+}
+.search li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer; font-size: 14px; }
+.search li[aria-selected="true"], .search li:hover { background: var(--accent-soft); }
+.search li .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.search li .tk { font: 500 12px var(--f-mono); color: var(--muted); }
+.search li .vd { font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 99px; background: var(--bg); color: var(--muted); white-space: nowrap; }
+.search li .vd.good { color: #2e9d4f; } .search li .vd.ok { color: var(--gold); } .search li .vd.bad { color: var(--neg); }
+.search li.live { color: var(--accent); font-weight: 500; }
+.search li.note { cursor: default; color: var(--muted); font-size: 13px; }
+.search li.note:hover { background: none; }
+.search-meta { display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); }
+.chipbtn { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 99px; padding: 3px 11px; font-size: 13px; cursor: pointer; }
+.chipbtn:hover { border-color: var(--accent); }
+.search-status { font-size: 13.5px; color: var(--muted); min-height: 1.4em; }
+.search-status.err { color: var(--neg); }
+.covered { font-size: 13px; color: var(--muted); }
+.covered summary { cursor: pointer; color: var(--accent); }
+.covered .cols { columns: 3 220px; margin-top: 10px; }
+.covered .cols div { break-inside: avoid; padding: 2px 0; }
+.covered .skip { margin-top: 10px; }
+.demo fin-spider { display: block; --fs-font: var(--f-body); --fs-mono: var(--f-mono); }
+.source-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.source-list li { display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 12px; }
+.source-list li::before { content: ""; width: 6px; height: 6px; margin-top: 9px; border-radius: 50%; background: var(--muted); }
 
 /* Writing */
 .substack-head {
@@ -268,6 +316,9 @@ main {
   .contact { margin-top: 0; }
   main { padding-block: 28px 60px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
   .posts { grid-template-columns: minmax(0, 1fr); }
+  .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .summary > div:nth-child(3) { border-left: 0; }
+  .summary > div:nth-child(n+3) { border-top: 1px solid var(--line); }
   .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stat-row > div:nth-child(3) { padding-left: 0; border-left: 0; }
   .stat-row > div:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -289,7 +340,7 @@ main {
   <main id="main"></main>
 </div>
 
-<script src="content.js"></script>
+<script src="content.js?v=4"></script>
 <script>
 (function () {
   const S = window.SITE;
@@ -319,6 +370,7 @@ main {
       <div class="chips">${p.focus.map((f) => `<span class="chip">${esc(f)}</span>`).join("")}</div>
       <nav class="nav" aria-label="Sections">
         <button data-go="research">Research <span class="count">${S.papers.length}</span></button>
+        ${(S.projects || []).length ? `<button data-go="projects">Projects <span class="count">${S.projects.length}</span></button>` : ""}
         <button data-go="writing">Writing <span class="count">${S.writing.length}</span></button>
         ${more ? `<button data-go="more">More <span class="count">${more}</span></button>` : ""}
       </nav>
@@ -365,6 +417,43 @@ main {
       </article>`;
   }
 
+  // A live demo is a custom element (e.g. <fin-spider>) whose script loads on first use.
+  function demoHTML(d) {
+    const tag = /^[a-z][a-z0-9]*-[a-z0-9-]+$/.test(d.tag || "") ? d.tag : null;
+    if (!tag) return "";
+    const attrs = Object.entries(d.attrs || {})
+      .map(([k, v]) => (/^[a-z][a-z0-9-]*$/.test(k) ? (v === "" ? ` ${k}` : ` ${k}="${esc(v)}"`) : "")).join("");
+    return `<${tag}${attrs}></${tag}>`;
+  }
+  const loadedScripts = new Set();
+  function loadDemoScript(src) {
+    if (!src || loadedScripts.has(src)) return;
+    loadedScripts.add(src);
+    const s = document.createElement("script");
+    s.src = src;
+    document.body.appendChild(s);
+  }
+
+  // Same card as a research paper: summary on the left, two headline stats on the right.
+  function projectCard(p) {
+    const top = (p.stats || []).slice(0, 2);
+    return `
+      <article class="paper-card" data-open="${esc(p.id)}" tabindex="0" aria-label="Open ${esc(p.shortTitle || p.title)}">
+        <div class="body">
+          <div class="meta eyebrow"><span>${esc(p.kind || "Project")}</span>${p.date ? `<span>${esc(p.date)}</span>` : ""}${p.area ? `<span>${esc(p.area)}</span>` : ""}</div>
+          <h3>${esc(p.title)}</h3>
+          <p class="headline">${esc(p.headline)}</p>
+          <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+          <div class="card-actions">
+            <button class="btn" type="button" data-open="${esc(p.id)}">Key findings &amp; live demo</button>
+          </div>
+        </div>
+        <div class="card-stats">
+          ${top.map((s) => `<div class="card-stat"><strong class="num">${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`).join("")}
+        </div>
+      </article>`;
+  }
+
   function postCard(w) {
     return `
       <a class="post" href="${esc(w.url)}" target="_blank" rel="noopener">
@@ -381,7 +470,8 @@ main {
     $("#main").innerHTML = `
       <section class="section" id="research" aria-labelledby="h-research">
         <div class="summary">
-          <div><strong class="num">${S.papers.length}</strong><span>research papers &amp; projects</span></div>
+          <div><strong class="num">${S.papers.length}</strong><span>research papers</span></div>
+          <div><strong class="num">${(S.projects || []).length}</strong><span>${(S.projects || []).length === 1 ? "project" : "projects"}</span></div>
           <div><strong class="num">${S.writing.length}</strong><span>essays on Substack</span></div>
           <div><strong>${latest ? fmtDate(latest.date) : "—"}</strong><span>latest essay</span></div>
         </div>
@@ -391,6 +481,15 @@ main {
         </div>
         <div class="papers">${S.papers.map(paperCard).join("")}</div>
       </section>
+
+      ${(S.projects || []).length ? `
+      <section class="section" id="projects" aria-labelledby="h-projects">
+        <div class="section-head">
+          <h2 id="h-projects">Projects</h2>
+          <p>Open a project for its findings, method, data sources and a live demo.</p>
+        </div>
+        <div class="papers">${S.projects.map(projectCard).join("")}</div>
+      </section>` : ""}
 
       <section class="section" id="writing" aria-labelledby="h-writing">
         <div class="section-head">
@@ -557,6 +656,237 @@ main {
     if (p.pdf) renderPdf(p.pdf, $("#reader"));
   }
 
+  /* ---------- Project detail (same layout as a paper, plus a live demo) ---------- */
+  function renderProject(p) {
+    const people = (p.authors || []).map((a, i) => (i === 0 ? `<b>${esc(a)}</b>` : esc(a))).join(", ");
+    const d = p.demo;
+    $("#main").innerHTML = `
+      <article class="detail">
+        <button class="back" type="button" id="back">← All projects</button>
+        <header class="detail-head">
+          <div class="eyebrow">${esc(p.kind || "Project")} · ${esc(p.date)} · ${esc(p.area)}</div>
+          <h2>${esc(p.title)}</h2>
+          ${people ? `<div class="byline">${people}</div>` : ""}
+        </header>
+
+        <div class="question">
+          <span class="eyebrow">The question</span>
+          <p>${esc(p.question)}</p>
+        </div>
+
+        <div class="stat-row">
+          ${p.stats.map((s) => `<div><strong class="num">${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`).join("")}
+        </div>
+
+        ${d ? `
+        <section class="block demo" id="demo">
+          <div class="demo-bar"><h3>Try it on any company</h3></div>
+          ${d.library ? `
+          <div class="search" role="search">
+            <span class="icon" aria-hidden="true">⌕</span>
+            <input id="co-search" type="search" autocomplete="off" spellcheck="false"
+              placeholder="Search a company by its official name, e.g. Infosys, Apple, Tata Motors"
+              role="combobox" aria-expanded="false" aria-controls="co-results" aria-autocomplete="list">
+            <ul id="co-results" role="listbox" hidden></ul>
+          </div>
+          <div class="search-meta">
+            <span>Try:</span><span id="co-featured"></span>
+            <span id="co-libinfo"></span>
+          </div>
+          <div class="search-status" id="co-status" aria-live="polite"></div>` : ""}
+          ${demoHTML(d)}
+          ${d.caption ? `<p class="cap">${esc(d.caption)}</p>` : ""}
+          ${d.library ? `<details class="covered" id="co-covered"><summary>Which companies are covered?</summary><div id="co-covered-body">Loading…</div></details>` : ""}
+        </section>` : ""}
+
+        <div class="two-col">
+          <section class="block">
+            <h3>Key findings</h3>
+            <ul class="findings">${p.findings.map((f) => `<li><span>${esc(f)}</span></li>`).join("")}</ul>
+          </section>
+          <section class="block">
+            <h3>Method</h3>
+            <dl class="factsheet">${p.method.map((m) => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join("")}</dl>
+            <div class="tags">${p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+          </section>
+        </div>
+
+        ${p.charts && p.charts.length ? `
+        <section class="block">
+          <h3>In numbers</h3>
+          <div class="charts">${p.charts.map(chartHTML).join("")}</div>
+        </section>` : ""}
+
+        <section class="block">
+          <h3>About the project</h3>
+          <p class="abstract">${esc(p.abstract)}</p>
+        </section>
+
+        ${(p.sources || []).length ? `
+        <section class="block">
+          <h3>Data sources</h3>
+          <ul class="source-list">${p.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)} ↗</a></li>`).join("")}</ul>
+          <p class="abstract">Automated analysis of public data for research and education. Not investment advice.</p>
+        </section>` : ""}
+
+        <div class="footer">© ${new Date().getFullYear()} ${esc(S.profile.name)}</div>
+      </article>`;
+    $("#back").addEventListener("click", () => go("projects"));
+    window.scrollTo(0, 0);
+    if (d) {
+      loadDemoScript(d.script);
+      const el = $("#main").querySelector(d.tag);
+      if (d.library && el) setupSearch(d, el);
+    }
+  }
+
+  /* ---------- Company search: weekly library first, live API for everything else ---------- */
+  function setupSearch(d, widget) {
+    const input = $("#co-search"), list = $("#co-results"), status = $("#co-status");
+    const base = d.library.replace(/[^/]*$/, "");          // folder of index.json
+    const api = (d.searchApi || "").replace(/\/$/, "");
+    let lib = { companies: [], skipped: [] }, items = [], active = -1, liveSeq = 0;
+    const norm = (s) => String(s).toLowerCase().replace(/\b(limited|ltd|inc|corp|corporation|company|co|plc|the)\b\.?/g, " ").replace(/[^a-z0-9&]+/g, " ").trim();
+    const tone = (v) => ({ "Strong Accumulate": "good", "Accumulate": "good", "Hold": "ok", "Avoid": "bad" }[v] || "");
+    const setStatus = (msg, err) => { status.textContent = msg || ""; status.classList.toggle("err", !!err); };
+
+    fetch(d.library, { cache: "no-cache" }).then((r) => r.json()).then((j) => {
+      lib = j;
+      $("#co-libinfo").textContent = `· ${j.companies.length} companies ready instantly (${(j.indices || []).join(" + ")}), updated ${fmtDate(j.updated)}`
+        + (api ? " · any other listed company on request" : "");
+      const fe = $("#co-featured");
+      (d.featured || []).map((t) => j.companies.find((c) => c.t === t)).filter(Boolean).forEach((c, i) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "chipbtn"; b.textContent = c.n.replace(/\s+(Limited|Ltd\.?|Inc\.?|Corporation|Corp\.?)$/i, "");
+        b.addEventListener("click", () => openLibrary(c));
+        fe.appendChild(b);
+        if (i < d.featured.length - 1) fe.appendChild(document.createTextNode(" "));
+      });
+      const body = $("#co-covered-body");
+      body.innerHTML = `<div class="cols">${j.companies.map((c) => `<div>${esc(c.n)} <span class="tk">${esc(c.t)}</span></div>`).join("")}</div>`
+        + (j.skipped.length ? `<div class="skip"><b>Not included (${j.skipped.length})</b>, because their data could not be verified:<div class="cols">${j.skipped.map((s) => `<div title="${esc(s.why)}">${esc(s.n)}: ${esc(s.why)}</div>`).join("")}</div></div>` : "");
+    }).catch(() => setStatus("The company library could not be loaded.", true));
+
+    function matches(q) {
+      const nq = norm(q), uq = q.trim().toUpperCase();
+      if (!nq) return [];
+      return lib.companies.map((c) => {
+        const nn = norm(c.n), tk = c.t.toUpperCase();
+        const score = tk === uq || tk.split(".")[0] === uq ? 0 : nn.startsWith(nq) ? 1
+          : (" " + nn).includes(" " + nq) ? 2 : nn.includes(nq) || tk.startsWith(uq) ? 3 : 9;
+        return { c, score };
+      }).filter((m) => m.score < 9).sort((a, b) => a.score - b.score || a.c.n.localeCompare(b.c.n)).slice(0, 7).map((m) => m.c);
+    }
+
+    function render() {
+      list.innerHTML = "";
+      items.forEach((it, i) => {
+        const li = document.createElement("li");
+        li.setAttribute("role", "option"); li.id = "co-opt-" + i;
+        li.setAttribute("aria-selected", String(i === active));
+        if (it.kind === "lib") {
+          li.innerHTML = `<span class="nm">${esc(it.c.n)}</span><span class="tk">${esc(it.c.t)}</span><span class="vd ${tone(it.c.v)}">${esc(it.c.v)} · ${it.c.s ?? "–"}</span>`;
+        } else if (it.kind === "liveq") {
+          li.className = "live"; li.innerHTML = `Search all listed companies for “${esc(it.q)}” →`;
+        } else if (it.kind === "live") {
+          li.innerHTML = `<span class="nm">${esc(it.r.name)}</span><span class="tk">${esc(it.r.ticker)}</span><span class="vd">Live · ${esc(it.r.coverage)}</span>`;
+        } else {
+          li.className = "note"; li.textContent = it.text;
+        }
+        if (it.kind !== "note") li.addEventListener("mousedown", (e) => { e.preventDefault(); choose(it); });
+        list.appendChild(li);
+      });
+      const open = items.length > 0;
+      list.hidden = !open;
+      input.setAttribute("aria-expanded", String(open));
+      input.setAttribute("aria-activedescendant", active >= 0 ? "co-opt-" + active : "");
+    }
+
+    function update() {
+      const q = input.value.trim();
+      liveSeq++;
+      active = -1;
+      if (q.length < 2) { items = []; render(); return; }
+      items = matches(q).map((c) => ({ kind: "lib", c }));
+      // companies deliberately left out of the library: say why
+      const nq = norm(q);
+      (lib.skipped || []).filter((s) => norm(s.n).startsWith(nq) || s.t.toUpperCase().split(".")[0] === q.toUpperCase())
+        .slice(0, 2).forEach((s) => items.push({ kind: "note", text: `${s.n} isn't in the library: ${s.why}.` }));
+      if (api) items.push({ kind: "liveq", q });
+      else if (!items.length) items.push({ kind: "note", text: "Not in the library. Live search for other companies isn't switched on yet." });
+      render();
+    }
+
+    async function liveSearch(q) {
+      const seq = ++liveSeq;
+      items = [{ kind: "note", text: `Searching all listed companies for “${q}”… (the first search can take up to a minute)` }];
+      render();
+      try {
+        const r = await fetch(`${api}/api/search?q=${encodeURIComponent(q)}`);
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const res = await r.json();
+        if (seq !== liveSeq) return;
+        items = res.length ? res.map((x) => ({ kind: "live", r: x }))
+          : [{ kind: "note", text: "No US, NSE or BSE listing found with that name. Try the official company name." }];
+      } catch (e) {
+        if (seq !== liveSeq) return;
+        items = [{ kind: "note", text: "Live search is unavailable right now. Please try again later." }];
+      }
+      active = items[0] && items[0].kind !== "note" ? 0 : -1;
+      render();
+    }
+
+    function openLibrary(c) {
+      close();
+      input.value = c.n;
+      widget.setAttribute("src", base + c.f + "?d=" + encodeURIComponent(c.d));
+      setStatus(`${c.n}: from the weekly library, data as of ${fmtDate(c.d)}.`);
+    }
+
+    async function openLive(r) {
+      close();
+      input.value = r.name;
+      const lib = lib_find(r.ticker);
+      if (lib) return openLibrary(lib);
+      setStatus(`Building a live report for ${r.name} from its filings… this usually takes 10-30 seconds (up to a minute if the server was asleep).`);
+      try {
+        const res = await fetch(`${api}/api/report?ticker=${encodeURIComponent(r.ticker)}`);
+        const j = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(j.detail || "HTTP " + res.status);
+        widget.data = j;
+        const v = j.verification || {};
+        const how = v.primary === "SEC EDGAR" ? "official SEC filings"
+          : v.verified > 0 ? `${v.primary}, cross-checked against Yahoo Finance`
+          : `${v.primary || "public data"} only (a second source wasn't available to cross-check)`;
+        setStatus(`${j.company.name}: live report from ${how}. Not saved.`);
+      } catch (e) {
+        setStatus(`Couldn't build a report for ${r.name}: ${e.message}`, true);
+      }
+    }
+    const lib_find = (t) => lib.companies.find((c) => c.t.toUpperCase() === String(t).toUpperCase());
+
+    function choose(it) {
+      if (it.kind === "lib") openLibrary(it.c);
+      else if (it.kind === "liveq") liveSearch(it.q);
+      else if (it.kind === "live") openLive(it.r);
+    }
+    function close() { items = []; active = -1; render(); }
+
+    input.addEventListener("input", update);
+    input.addEventListener("focus", update);
+    input.addEventListener("blur", () => setTimeout(close, 120));
+    input.addEventListener("keydown", (e) => {
+      const n = items.length;
+      if (e.key === "ArrowDown" && n) { e.preventDefault(); active = (active + 1) % n; render(); }
+      else if (e.key === "ArrowUp" && n) { e.preventDefault(); active = (active - 1 + n) % n; render(); }
+      else if (e.key === "Enter") {
+        e.preventDefault();
+        const it = items[active >= 0 ? active : 0];
+        if (it && it.kind !== "note") choose(it);
+      } else if (e.key === "Escape") close();
+    });
+  }
+
   /* ---------- PDF reader (pdf.js, loaded only when a paper is opened) ---------- */
   const PDFJS = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/";
   let pdfReady;
@@ -620,11 +950,13 @@ main {
   }
 
   /* ---------- Routing ---------- */
-  const SECTIONS = ["research", "writing", "more"];
+  const SECTIONS = ["research", "projects", "writing", "more"];
   function route() {
     const h = decodeURIComponent(location.hash.slice(1));
     const paper = S.papers.find((p) => p.id === h);
+    const project = (S.projects || []).find((p) => p.id === h);
     if (paper) { renderPaper(paper); document.title = paper.shortTitle + " · " + S.profile.name; }
+    else if (project) { renderProject(project); document.title = (project.shortTitle || project.title) + " · " + S.profile.name; }
     else { renderHome(SECTIONS.includes(h) ? h : null); document.title = S.profile.name + " Research"; }
   }
   function openPaper(id) { location.hash = id; }
