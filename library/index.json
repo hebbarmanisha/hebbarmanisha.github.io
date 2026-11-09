@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "complete": true,
  "indices": [
   "Nifty 50",
@@ -13,7 +13,7 @@
    "v": "Avoid",
    "s": 4.9,
    "f": "reports/MMM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -23,7 +23,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/ABT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -33,7 +33,7 @@
    "v": "Hold",
    "s": 5.4,
    "f": "reports/ABBV.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -43,7 +43,7 @@
    "v": "Accumulate",
    "s": 7.9,
    "f": "reports/ACN.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -53,7 +53,7 @@
    "v": "Accumulate",
    "s": 7.1,
    "f": "reports/ADANIPORTS_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -63,7 +63,7 @@
    "v": "Strong Accumulate",
    "s": 8.2,
    "f": "reports/ADBE.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -73,7 +73,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/AMD.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -83,7 +83,7 @@
    "v": "Strong Accumulate",
    "s": 10.0,
    "f": "reports/GOOG.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -93,7 +93,7 @@
    "v": "Hold",
    "s": 6.5,
    "f": "reports/MO.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -103,7 +103,7 @@
    "v": "Accumulate",
    "s": 7.6,
    "f": "reports/AMZN.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -113,7 +113,7 @@
    "v": "Accumulate",
    "s": 9.0,
    "f": "reports/AXP.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -123,7 +123,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/AMT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -133,7 +133,7 @@
    "v": "Hold",
    "s": 5.3,
    "f": "reports/AMGN.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -143,7 +143,7 @@
    "v": "Accumulate",
    "s": 6.7,
    "f": "reports/APOLLOHOSP_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -153,7 +153,7 @@
    "v": "Accumulate",
    "s": 6.8,
    "f": "reports/AAPL.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -163,7 +163,7 @@
    "v": "Strong Accumulate",
    "s": 8.6,
    "f": "reports/AMAT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -173,7 +173,7 @@
    "v": "Strong Accumulate",
    "s": 8.3,
    "f": "reports/ANET.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -183,7 +183,7 @@
    "v": "Accumulate",
    "s": 7.7,
    "f": "reports/ASIANPAINT_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -193,7 +193,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/T.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -203,7 +203,7 @@
    "v": "Hold",
    "s": 5.3,
    "f": "reports/BAC.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -213,7 +213,7 @@
    "v": "Avoid",
    "s": 5.0,
    "f": "reports/BRK-B.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -223,7 +223,7 @@
    "v": "Accumulate",
    "s": 7.9,
    "f": "reports/BEL_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -233,7 +233,7 @@
    "v": "Hold",
    "s": 6.3,
    "f": "reports/BLK.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -243,7 +243,7 @@
    "v": "Hold",
    "s": 8.4,
    "f": "reports/BKNG.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -253,7 +253,7 @@
    "v": "Hold",
    "s": 5.8,
    "f": "reports/BMY.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -263,7 +263,7 @@
    "v": "Strong Accumulate",
    "s": 9.1,
    "f": "reports/AVGO.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -273,7 +273,7 @@
    "v": "Avoid",
    "s": 4.8,
    "f": "reports/COF.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -283,7 +283,7 @@
    "v": "Accumulate",
    "s": 6.6,
    "f": "reports/CAT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -293,7 +293,7 @@
    "v": "Hold",
    "s": 6.4,
    "f": "reports/CVX.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -303,7 +303,7 @@
    "v": "Hold",
    "s": 6.2,
    "f": "reports/CIPLA_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -313,7 +313,7 @@
    "v": "Hold",
    "s": 6.5,
    "f": "reports/CSCO.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -323,7 +323,7 @@
    "v": "Avoid",
    "s": 2.9,
    "f": "reports/C.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -333,7 +333,7 @@
    "v": "Accumulate",
    "s": 8.0,
    "f": "reports/CMCSA.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -343,7 +343,7 @@
    "v": "Accumulate",
    "s": 7.8,
    "f": "reports/COP.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -353,7 +353,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/COST.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -363,7 +363,7 @@
    "v": "Avoid",
    "s": 3.6,
    "f": "reports/CVS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -373,7 +373,7 @@
    "v": "Hold",
    "s": 5.1,
    "f": "reports/DHR.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -383,7 +383,7 @@
    "v": "Accumulate",
    "s": 6.6,
    "f": "reports/DE.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -393,7 +393,7 @@
    "v": "Hold",
    "s": 5.7,
    "f": "reports/DELL.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -403,7 +403,7 @@
    "v": "Avoid",
    "s": 4.4,
    "f": "reports/DUK.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -413,7 +413,7 @@
    "v": "Strong Accumulate",
    "s": 8.9,
    "f": "reports/EICHERMOT_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -423,7 +423,7 @@
    "v": "Accumulate",
    "s": 7.7,
    "f": "reports/LLY.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -433,7 +433,7 @@
    "v": "Avoid",
    "s": 3.7,
    "f": "reports/EMR.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -443,7 +443,7 @@
    "v": "Avoid",
    "s": 4.4,
    "f": "reports/FDX.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -453,7 +453,7 @@
    "v": "Accumulate",
    "s": 6.7,
    "f": "reports/GE.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -463,7 +463,7 @@
    "v": "Hold",
    "s": 5.4,
    "f": "reports/GEV.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -473,7 +473,7 @@
    "v": "Hold",
    "s": 5.9,
    "f": "reports/GD.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -483,7 +483,7 @@
    "v": "Avoid",
    "s": 2.3,
    "f": "reports/GM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -493,7 +493,7 @@
    "v": "Strong Accumulate",
    "s": 8.2,
    "f": "reports/GILD.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -503,7 +503,7 @@
    "v": "Avoid",
    "s": 1.6,
    "f": "reports/GRASIM_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -513,7 +513,7 @@
    "v": "Hold",
    "s": 5.4,
    "f": "reports/HINDALCO_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -523,7 +523,7 @@
    "v": "Accumulate",
    "s": 7.6,
    "f": "reports/HINDUNILVR_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -533,7 +533,7 @@
    "v": "Avoid",
    "s": 2.9,
    "f": "reports/INTC.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -543,7 +543,7 @@
    "v": "Hold",
    "s": 6.2,
    "f": "reports/IBM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -553,7 +553,7 @@
    "v": "Strong Accumulate",
    "s": 9.3,
    "f": "reports/INTU.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -563,7 +563,7 @@
    "v": "Strong Accumulate",
    "s": 8.6,
    "f": "reports/ISRG.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -573,7 +573,7 @@
    "v": "Strong Accumulate",
    "s": 8.5,
    "f": "reports/ITC_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -583,7 +583,7 @@
    "v": "Accumulate",
    "s": 7.2,
    "f": "reports/JNJ.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -593,7 +593,7 @@
    "v": "Hold",
    "s": 6.2,
    "f": "reports/JPM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -603,7 +603,7 @@
    "v": "Accumulate",
    "s": 7.2,
    "f": "reports/JSWSTEEL_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -613,7 +613,7 @@
    "v": "Strong Accumulate",
    "s": 8.8,
    "f": "reports/LRCX.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -623,7 +623,7 @@
    "v": "Avoid",
    "s": 4.9,
    "f": "reports/LT_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -633,7 +633,7 @@
    "v": "Accumulate",
    "s": 6.8,
    "f": "reports/LIN.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -643,7 +643,7 @@
    "v": "Avoid",
    "s": 4.7,
    "f": "reports/LMT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -653,7 +653,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/LOW.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -663,7 +663,7 @@
    "v": "Accumulate",
    "s": 6.5,
    "f": "reports/MA.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -673,7 +673,7 @@
    "v": "Hold",
    "s": 6.1,
    "f": "reports/MAXHEALTH_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -683,7 +683,7 @@
    "v": "Accumulate",
    "s": 7.9,
    "f": "reports/MCD.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -693,7 +693,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/MDT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -703,7 +703,7 @@
    "v": "Accumulate",
    "s": 7.8,
    "f": "reports/MRK.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -713,7 +713,7 @@
    "v": "Strong Accumulate",
    "s": 9.5,
    "f": "reports/META.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -723,7 +723,7 @@
    "v": "Strong Accumulate",
    "s": 9.6,
    "f": "reports/MU.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -733,7 +733,7 @@
    "v": "Strong Accumulate",
    "s": 9.0,
    "f": "reports/MSFT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -743,7 +743,7 @@
    "v": "Avoid",
    "s": 4.5,
    "f": "reports/MDLZ.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -753,7 +753,7 @@
    "v": "Avoid",
    "s": 4.0,
    "f": "reports/MS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -763,7 +763,7 @@
    "v": "Strong Accumulate",
    "s": 8.5,
    "f": "reports/NFLX.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -773,7 +773,7 @@
    "v": "Hold",
    "s": 5.5,
    "f": "reports/NEE.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -783,7 +783,7 @@
    "v": "Strong Accumulate",
    "s": 9.6,
    "f": "reports/NVDA.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -793,7 +793,7 @@
    "v": "Hold",
    "s": 6.3,
    "f": "reports/ORCL.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -803,7 +803,7 @@
    "v": "Strong Accumulate",
    "s": 8.9,
    "f": "reports/PLTR.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -813,7 +813,7 @@
    "v": "Hold",
    "s": 5.4,
    "f": "reports/PANW.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -823,7 +823,7 @@
    "v": "Hold",
    "s": 5.1,
    "f": "reports/PEP.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -833,7 +833,7 @@
    "v": "Avoid",
    "s": 4.1,
    "f": "reports/PFE.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -843,7 +843,7 @@
    "v": "Accumulate",
    "s": 6.6,
    "f": "reports/PM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -853,7 +853,7 @@
    "v": "Strong Accumulate",
    "s": 8.2,
    "f": "reports/QCOM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -863,7 +863,7 @@
    "v": "Hold",
    "s": 5.2,
    "f": "reports/RELIANCE_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -873,7 +873,7 @@
    "v": "Hold",
    "s": 5.5,
    "f": "reports/RTX.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -883,7 +883,7 @@
    "v": "Accumulate",
    "s": 7.1,
    "f": "reports/CRM.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -893,7 +893,7 @@
    "v": "Accumulate",
    "s": 9.1,
    "f": "reports/SNDK.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -903,7 +903,7 @@
    "v": "Accumulate",
    "s": 7.6,
    "f": "reports/NOW.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -913,7 +913,7 @@
    "v": "Hold",
    "s": 5.2,
    "f": "reports/SBUX.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -923,7 +923,7 @@
    "v": "Strong Accumulate",
    "s": 8.5,
    "f": "reports/SUNPHARMA_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -933,7 +933,7 @@
    "v": "Hold",
    "s": 6.1,
    "f": "reports/TMUS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -943,7 +943,7 @@
    "v": "Strong Accumulate",
    "s": 8.8,
    "f": "reports/TCS_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -953,7 +953,7 @@
    "v": "Hold",
    "s": 5.8,
    "f": "reports/TATACONSUM_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -963,7 +963,7 @@
    "v": "Avoid",
    "s": 3.9,
    "f": "reports/TATASTEEL_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -973,7 +973,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/TSLA.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -983,7 +983,7 @@
    "v": "Hold",
    "s": 6.2,
    "f": "reports/TXN.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -993,7 +993,7 @@
    "v": "Avoid",
    "s": 4.9,
    "f": "reports/BNY.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1003,7 +1003,7 @@
    "v": "Avoid",
    "s": 4.2,
    "f": "reports/BA.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1013,7 +1013,7 @@
    "v": "Strong Accumulate",
    "s": 9.0,
    "f": "reports/SCHW.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1023,7 +1023,7 @@
    "v": "Accumulate",
    "s": 7.7,
    "f": "reports/KO.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1033,7 +1033,7 @@
    "v": "Avoid",
    "s": 4.8,
    "f": "reports/GS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1043,7 +1043,7 @@
    "v": "Hold",
    "s": 5.6,
    "f": "reports/HD.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1053,7 +1053,7 @@
    "v": "Hold",
    "s": 6.1,
    "f": "reports/PG.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1063,7 +1063,7 @@
    "v": "Avoid",
    "s": 4.6,
    "f": "reports/SO.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1073,7 +1073,7 @@
    "v": "Hold",
    "s": 5.7,
    "f": "reports/DIS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1083,7 +1083,7 @@
    "v": "Hold",
    "s": 5.7,
    "f": "reports/TMO.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1093,7 +1093,7 @@
    "v": "Hold",
    "s": 5.4,
    "f": "reports/TITAN_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -1103,7 +1103,7 @@
    "v": "Accumulate",
    "s": 7.2,
    "f": "reports/TRENT_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -1113,7 +1113,7 @@
    "v": "Hold",
    "s": 5.1,
    "f": "reports/USB.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1123,7 +1123,7 @@
    "v": "Accumulate",
    "s": 7.6,
    "f": "reports/UBER.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1133,7 +1133,7 @@
    "v": "Avoid",
    "s": 4.8,
    "f": "reports/ULTRACEMCO_NS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "Screener.in"
   },
   {
@@ -1143,7 +1143,7 @@
    "v": "Accumulate",
    "s": 6.9,
    "f": "reports/UNP.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1153,7 +1153,7 @@
    "v": "Hold",
    "s": 6.0,
    "f": "reports/UPS.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1163,7 +1163,7 @@
    "v": "Avoid",
    "s": 4.1,
    "f": "reports/UNH.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1173,7 +1173,7 @@
    "v": "Hold",
    "s": 5.6,
    "f": "reports/VZ.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1183,7 +1183,7 @@
    "v": "Hold",
    "s": 6.1,
    "f": "reports/V.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1193,7 +1193,7 @@
    "v": "Hold",
    "s": 5.0,
    "f": "reports/WMT.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   },
   {
@@ -1203,7 +1203,7 @@
    "v": "Hold",
    "s": 5.8,
    "f": "reports/WFC.json",
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "src": "SEC EDGAR"
   }
  ],
