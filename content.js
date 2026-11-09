@@ -188,7 +188,7 @@ window.SITE = {
       area: "Fundamental analysis",
       authors: ["Manisha Hebbar"],
       question: "Can a company's annual financial statements be turned into a transparent long-term verdict, where every number can be traced back to the filing it came from?",
-      headline: "A Python tool that reads up to 10 years of a company's statements from official filings, cross-checks every figure against a second source, scores its financial health out of 10, and shows each calculation step by step. Search any of 120 companies, or request another live.",
+      headline: "A Python tool that reads up to 10 years of a company's statements from official filings, cross-checks every figure against a second source, scores its financial health out of 10, and shows each calculation step by step. Search any of the 120 companies in its library.",
       abstract: "finspider takes a company name and assembles its income statement, balance sheet and cash flow from official sources: SEC EDGAR 10-K filings for US companies, and Screener.in (compiled from BSE/NSE filings) for Indian companies. Every figure is cross-checked against Yahoo Finance; figures where the two sources disagree by more than 2% are shown but never used for scoring. It computes 20+ ratios covering liquidity, debt, returns, margins, growth, cash conversion and valuation against the company's own history, scores each on a 0-10 scale against fixed thresholds, and combines them into a weighted verdict: Strong Accumulate, Accumulate, Hold or Avoid. An animated spider demonstrates the method: it walks to the statements, picks up the exact figures each ratio needs, and works out the result with its sources. This is a rules-based research tool, not investment advice.",
       stats: [
         { value: "120", label: "companies searchable instantly (S&P 100 and Nifty 50), refreshed every week" },
@@ -206,7 +206,7 @@ window.SITE = {
       method: [
         { label: "Data", value: "SEC EDGAR 10-K filings (US); Screener.in, compiled from BSE/NSE filings (India)" },
         { label: "Checks", value: "Each figure cross-checked against Yahoo Finance, like for like; within ±2% counts as verified" },
-        { label: "Library", value: "S&P 100 and Nifty 50, rebuilt every Monday by a GitHub Action; other companies run live on request" },
+        { label: "Library", value: "S&P 100 and Nifty 50 members with verifiable data, rebuilt every Monday by a GitHub Action" },
         { label: "Ratios", value: "Liquidity, leverage, ROE/ROCE, margins, 5-year CAGR, cash conversion, P/E, P/B, PEG vs own history" },
         { label: "Scoring", value: "Each ratio 0-10 against fixed thresholds; weighted by category; red flags cap the verdict" },
         { label: "Built with", value: "Python (pandas, yfinance, requests), and a custom animated web component" }
@@ -253,10 +253,10 @@ window.SITE = {
         script: "projects/finspider/finspider-spider.js?v=4",
         tag: "fin-spider",
         attrs: { src: "library/reports/NVDA.json", transparent: "" },
-        // Company search: the weekly library (Nifty 50 + S&P 100) answers instantly;
-        // anything else goes to the live API once `searchApi` is set.
+        // Company search over the weekly library (Nifty 50 + S&P 100).
+        // Optional: set `searchApi` to a running finspider API to also search any other company.
         library: "library/index.json",
-        searchApi: "",   // e.g. "https://hebbarmanisha-finspider-api.hf.space" (set after the Space is created)
+        searchApi: "",
         featured: ["NVDA", "ASIANPAINT.NS", "AAPL"],
         caption: "Search a company above. The spider reads its statements on the left, carries each figure to the scorecard web and works out the ratio below. Click any figure to open its source filing. Reports are generated on demand and not stored."
       },

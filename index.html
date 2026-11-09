@@ -340,7 +340,7 @@ main {
   <main id="main"></main>
 </div>
 
-<script src="content.js?v=4"></script>
+<script src="content.js?v=5"></script>
 <script>
 (function () {
   const S = window.SITE;
@@ -813,7 +813,7 @@ main {
       (lib.skipped || []).filter((s) => norm(s.n).startsWith(nq) || s.t.toUpperCase().split(".")[0] === q.toUpperCase())
         .slice(0, 2).forEach((s) => items.push({ kind: "note", text: `${s.n} isn't in the library: ${s.why}.` }));
       if (api) items.push({ kind: "liveq", q });
-      else if (!items.length) items.push({ kind: "note", text: "Not in the library. Live search for other companies isn't switched on yet." });
+      else if (!items.length) items.push({ kind: "note", text: "Not covered yet: the library includes S&P 100 and Nifty 50 companies whose data could be verified." });
       render();
     }
 
