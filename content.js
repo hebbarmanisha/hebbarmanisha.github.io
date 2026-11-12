@@ -304,10 +304,11 @@ window.SITE = {
       ],
       demo: {
         heading: "The latest sweep",
+        // Loaded live from Inverika's GitHub Pages site (github.com/inverikacapital/market-matter).
         // ?v= forces browsers to fetch the new file after an update; bump it when it changes
-        script: "projects/marketmatter/market-matter.js?v=1",
+        script: "https://inverikacapital.github.io/market-matter/market-matter.js?v=1",
         tag: "market-matter",
-        attrs: { src: "library/marketmatter/latest.json", archive: "library/marketmatter/index.json" },
+        attrs: { src: "https://inverikacapital.github.io/market-matter/data/latest.json", archive: "https://inverikacapital.github.io/market-matter/data/index.json" },
         caption: "This updates by itself every weekday evening. Use Past sweeps to open an earlier day. Every headline links to the original article."
       },
       sources: [
@@ -316,7 +317,7 @@ window.SITE = {
         { label: "News: Mint Markets", url: "https://www.livemint.com/market" },
         { label: "News: Business Standard Markets", url: "https://www.business-standard.com/markets" },
         { label: "News: Hindu BusinessLine Markets", url: "https://www.thehindubusinessline.com/markets/" },
-        { label: "Source code: the sweep and its daily schedule", url: "https://github.com/hebbarmanisha/hebbarmanisha.github.io/tree/main/tools/marketmatter" }
+        { label: "Source code: the sweep and its daily schedule", url: "https://github.com/inverikacapital/market-matter" }
       ],
       tags: ["Python", "Automation", "Market analysis", "News analysis", "GitHub Actions", "Data visualisation"]
     }
