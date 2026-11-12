@@ -269,6 +269,56 @@ window.SITE = {
         { label: "Cross-check: Yahoo Finance financial statements", url: "https://finance.yahoo.com/" }
       ],
       tags: ["Python", "Financial statements", "SEC filings", "Data verification", "Scoring model", "Data visualisation"]
+    },
+
+    {
+      id: "market-matter",
+      title: "Inverika Market Matter: An Automated Daily Sweep of the Indian Stock Market",
+      shortTitle: "Inverika Market Matter",
+      kind: "Project",
+      date: "November 2026",
+      area: "Market research",
+      authors: ["Manisha Hebbar"],
+      question: "Can the day's Indian market move be summarised and explained automatically every evening, with every claim tied to a number or a headline?",
+      headline: "A Python sweep built for Inverika that runs every weekday after the NSE close. It pulls 77 indices, stocks and commodities plus the day's headlines from six news sources, works out what moved the market, and publishes the result on this page automatically.",
+      abstract: "Inverika Market Matter is a daily market sweep built for Inverika. A scheduled GitHub Action runs it every weekday at 16:45 IST, after the NSE close. It collects the Nifty 50, Sensex, Nifty Bank, Midcap and India VIX, 11 sector indices, all 50 Nifty stocks, the previous US session, Asian and European markets, crude, gold, silver, the rupee, the US 10-year yield and the dollar index. It also reads the day's market headlines from Economic Times, Mint, Business Standard, Hindu BusinessLine and Google News. Each signal that moved beyond a fixed threshold becomes a driver, such as sector leadership, market breadth, big stock moves, global cues, oil, gold, the rupee, US yields, volatility or foreign-flow news. Each driver states its numbers, why it matters for Indian stocks, and the headlines that mention it. The page below shows the newest sweep, and every past sweep is kept for the archive. Drivers describe what moved alongside the market; they are not proof of cause. This is a research tool, not investment advice.",
+      stats: [
+        { value: "77", label: "indices, stocks, commodities and currencies read every trading day" },
+        { value: "6", label: "Indian and global news sources scanned for the day's market headlines" },
+        { value: "16:45", label: "IST, Monday to Friday: the sweep runs and publishes itself after the close" },
+        { value: "9", label: "kinds of market driver it checks, each with a fixed, published threshold" }
+      ],
+      findings: [
+        "On its first run (12 Nov 2026) the sweep caught a narrow rally. The Nifty 50 rose 0.18% even though 30 of its 50 stocks fell, because Realty (+4.51%), PSU banks (+1.51%) and financial services (+1.42%) did the lifting. It matched that move to the same evening's market-close reports.",
+        "Timing matters for global cues. US markets close after India, so the sweep reads the previous US session (S&P 500 +1.31% that night). It also leaves out Asian markets whose close for the day isn't published yet, so it never mixes stale or later data into the explanation.",
+        "Headlines only count if they appeared around the session. Without that rule, reports of the next US session's sell-off were being attached to India's day.",
+        "Keyword matching needs whole words and care. Early versions matched 'oil' inside other words, tied an SBI Mutual Fund ETF launch to the banking story, and picked up a craft blog's 'nifty' cube books from Google News. Each of these is now filtered out.",
+        "Exact FII/DII flow figures aren't available from a public feed. So the sweep reports foreign-investor flows only when the day's headlines mention them, rather than guessing a number."
+      ],
+      method: [
+        { label: "Prices", value: "Yahoo Finance: NSE and BSE indices, 11 sector indices, all Nifty 50 stocks, global indices, futures and FX" },
+        { label: "News", value: "Economic Times, Mint, Business Standard, Hindu BusinessLine RSS feeds and a Google News search, last 30 hours" },
+        { label: "Drivers", value: "Breadth, sector leaders, stock moves of 3%+, global cues (0.5%+), Brent (1%+), gold (1.5%+), rupee (0.2%+), US yields (5 bps+), India VIX (4%+), foreign-flow news" },
+        { label: "Schedule", value: "GitHub Action, Monday to Friday at 16:45 IST; publishes the latest sweep and keeps an archive of past days" },
+        { label: "Built with", value: "Python (pandas, yfinance, requests) and a custom web component for this page" }
+      ],
+      demo: {
+        heading: "The latest sweep",
+        // ?v= forces browsers to fetch the new file after an update; bump it when it changes
+        script: "projects/marketmatter/market-matter.js?v=1",
+        tag: "market-matter",
+        attrs: { src: "library/marketmatter/latest.json", archive: "library/marketmatter/index.json" },
+        caption: "This updates by itself every weekday evening. Use Past sweeps to open an earlier day. Every headline links to the original article."
+      },
+      sources: [
+        { label: "Market data: Yahoo Finance", url: "https://finance.yahoo.com/" },
+        { label: "News: Economic Times Markets", url: "https://economictimes.indiatimes.com/markets" },
+        { label: "News: Mint Markets", url: "https://www.livemint.com/market" },
+        { label: "News: Business Standard Markets", url: "https://www.business-standard.com/markets" },
+        { label: "News: Hindu BusinessLine Markets", url: "https://www.thehindubusinessline.com/markets/" },
+        { label: "Source code: the sweep and its daily schedule", url: "https://github.com/hebbarmanisha/hebbarmanisha.github.io/tree/main/tools/marketmatter" }
+      ],
+      tags: ["Python", "Automation", "Market analysis", "News analysis", "GitHub Actions", "Data visualisation"]
     }
   ],
 

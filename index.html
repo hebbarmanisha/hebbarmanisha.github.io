@@ -680,7 +680,7 @@ main {
 
         ${d ? `
         <section class="block demo" id="demo">
-          <div class="demo-bar"><h3>Try it on any company</h3></div>
+          <div class="demo-bar"><h3>${esc(d.heading || "Try it on any company")}</h3></div>
           ${d.library ? `
           <div class="search" role="search">
             <span class="icon" aria-hidden="true">⌕</span>
