@@ -35,6 +35,8 @@ window.SITE = {
       { label: "Substack", url: "https://manishahebbar.substack.com/" }
       // { label: "LinkedIn", url: "https://www.linkedin.com/in/your-handle" },
     ],
+    // Fourth number in the hero (the first three are counted automatically)
+    heroStat: { value: "500", label: "stocks tracked live on Market Matters" },
     focus: ["Mutual funds", "Investment strategy", "Portfolio analysis", "Personal finance"]
   },
 
@@ -317,6 +319,13 @@ window.SITE = {
       tags: ["Python", "Automation", "Live dashboard", "Market analysis", "GitHub Actions", "Data visualisation"]
     }
   ],
+
+  // Live market numbers for the ticker and the hero chart (published daily by Market Matters)
+  market: {
+    name: "Market Matters",
+    url: "https://inverikacapital.github.io/market-matter/",
+    data: "https://inverikacapital.github.io/market-matter/data/latest.json"
+  },
 
   substack: {
     name: "Manisha Hebbar on Substack",
