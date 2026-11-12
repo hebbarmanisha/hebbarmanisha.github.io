@@ -27,7 +27,6 @@ window.SITE = {
     name: "Manisha Hebbar",
     headline: "Finance research & writing",
     roles: ["B.Com (Hons) Financial Management", "US CMA candidate"],
-    institution: "MYCAS College of Professional Studies, Mysuru",
     location: "Mysuru, India",
     bio: "I study how people should invest, not just what they should buy. My research compares investment strategies across real market cycles using historical fund data, and I write a Substack that explains finance in plain language.",
     email: "hebbarmanisha@gmail.com",
@@ -320,7 +319,7 @@ window.SITE = {
     }
   ],
 
-  // Live market numbers for the ticker and the hero chart (published daily by Market Matters)
+  // Live market numbers for the hero chart (published daily by Market Matters)
   market: {
     name: "Market Matters",
     url: "https://inverikacapital.github.io/market-matter/",

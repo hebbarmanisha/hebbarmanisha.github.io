@@ -5,12 +5,14 @@
 <title>Manisha Hebbar Research</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Research papers, key findings and writing by Manisha Hebbar.">
-<meta name="theme-color" content="#0a0e13">
+<meta name="theme-color" content="#0a0e13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f6f8" media="(prefers-color-scheme: light)">
+<script>try { var th = localStorage.getItem("theme"); if (th === "light" || th === "dark") document.documentElement.dataset.theme = th; } catch (e) {}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <style>
-/* Layout: a market-desk ticker across the top, a profile rail on the left (stacks on phones),
+/* Layout: a profile rail on the left (stacks below on phones),
    and a working area: hero with live Nifty line and headline numbers, then research, projects
    and writing as cards that open into factsheet-style pages.
    One deliberate dark look: deep navy-black, a muted teal accent, soft amber for highlights. */
@@ -30,8 +32,11 @@
   --gold-soft: #241f15;
   --neg: #e08a7f;
   --up: #6cc2b0;
+  --ink-2: #c3cad4;
   --grid: rgba(150, 175, 200, 0.035);
   --glow: rgba(108, 194, 176, 0.10);
+  --chart-bg: rgba(10, 14, 19, 0.55);
+  --shadow: rgba(0, 0, 0, 0.85);
   --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
@@ -39,6 +44,26 @@
   --radius: 14px;
   --ease: cubic-bezier(.2, .7, .2, 1);
   color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+  --bg: #f4f6f8; --bg-2: #edf0f4; --surface: #ffffff; --surface-2: #f6f8fa;
+  --line: #e0e5eb; --line-2: #cbd3dc; --ink: #0f1720; --ink-2: #3a4655; --muted: #5d6a79;
+  --accent: #1d7a6c; --accent-ink: #ffffff; --accent-soft: #e2f1ee;
+  --gold: #976712; --gold-soft: #f9f0df; --neg: #b3453b; --up: #1d7a6c;
+  --grid: rgba(20, 40, 60, 0.045); --glow: rgba(29, 122, 108, 0.08);
+  --chart-bg: #fbfcfd; --shadow: rgba(15, 23, 32, 0.22);
+  color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f4f6f8; --bg-2: #edf0f4; --surface: #ffffff; --surface-2: #f6f8fa;
+  --line: #e0e5eb; --line-2: #cbd3dc; --ink: #0f1720; --ink-2: #3a4655; --muted: #5d6a79;
+  --accent: #1d7a6c; --accent-ink: #ffffff; --accent-soft: #e2f1ee;
+  --gold: #976712; --gold-soft: #f9f0df; --neg: #b3453b; --up: #1d7a6c;
+  --grid: rgba(20, 40, 60, 0.045); --glow: rgba(29, 122, 108, 0.08);
+  --chart-bg: #fbfcfd; --shadow: rgba(15, 23, 32, 0.22);
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -68,30 +93,11 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 700; text-wrap: balance
 .num { font-variant-numeric: tabular-nums; }
 .up { color: var(--up); } .down { color: var(--neg); } .flat { color: var(--muted); }
 
-/* ---------- Ticker ---------- */
-.ticker {
-  display: flex; align-items: stretch; height: 38px; overflow: hidden;
-  background: var(--bg-2); border-bottom: 1px solid var(--line);
-  font: 500 12.5px/38px var(--f-mono); white-space: nowrap;
-  padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
-}
-.ticker-label {
-  flex: none; display: flex; align-items: center; gap: 8px; padding: 0 16px;
-  color: var(--ink); text-decoration: none; text-transform: uppercase; letter-spacing: .08em; font-size: 11px;
-  border-right: 1px solid var(--line); background: var(--bg-2); position: relative; z-index: 1;
-}
-.ticker-label:hover { color: var(--accent); }
+/* ---------- Live dot (used on the Market Matters panel) ---------- */
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--accent); animation: pulse 2.4s infinite; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(108,194,176,.55); } 70% { box-shadow: 0 0 0 7px rgba(108,194,176,0); } 100% { box-shadow: 0 0 0 0 rgba(108,194,176,0); } }
-.ticker-viewport { flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
-.ticker-track { display: inline-flex; gap: 34px; padding-left: 24px; animation: marquee var(--dur, 60s) linear infinite; }
-.ticker:hover .ticker-track { animation-play-state: paused; }
-.ticker-item { display: inline-flex; gap: 8px; }
-.ticker-item .n { color: var(--muted); }
-.ticker-item .v { color: var(--ink); }
-@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 70% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 0%, transparent); } 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); } }
 
-.ticker, .shell { position: relative; z-index: 1; }
+.shell { position: relative; z-index: 1; }
 .shell {
   display: grid; grid-template-columns: var(--rail) minmax(0, 1fr);
   max-width: 1320px; margin: 0 auto; min-height: 100vh;
@@ -108,6 +114,18 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 700; text-wrap: balance
   display: flex; flex-direction: column; gap: 20px;
 }
 .rail-id { display: flex; align-items: center; gap: 14px; }
+.contact-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.theme-btn {
+  flex: none; width: 32px; height: 32px; border-radius: 9px; cursor: pointer;
+  display: grid; place-items: center; color: var(--muted); background: var(--surface); border: 1px solid var(--line-2);
+  transition: color .2s, border-color .2s, transform .3s var(--ease);
+}
+.theme-btn:hover { color: var(--accent); border-color: var(--accent); }
+.theme-btn:active { transform: rotate(25deg) scale(.92); }
+.theme-btn svg { width: 17px; height: 17px; }
+.theme-btn .sun { display: none; }
+:root[data-theme="dark"] .theme-btn .sun { display: block; } :root[data-theme="dark"] .theme-btn .moon { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-btn .sun { display: block; } :root:not([data-theme="light"]) .theme-btn .moon { display: none; } }
 .monogram {
   width: 50px; height: 50px; border-radius: 12px; flex: none;
   display: grid; place-items: center; position: relative;
@@ -119,7 +137,7 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 700; text-wrap: balance
 .rail h1 { font-size: 21px; line-height: 1.15; font-weight: 700; }
 .rail .headline { color: var(--muted); font-size: 13px; margin-top: 2px; }
 .rail .roles { display: flex; flex-direction: column; gap: 3px; font-size: 13.5px; }
-.rail .roles span:last-child { color: var(--muted); }
+.rail .roles span + span { color: var(--muted); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip {
   font-size: 12px; padding: 3px 10px; border-radius: 99px;
@@ -174,16 +192,16 @@ main {
 }
 .hero::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(600px 300px at 85% 0%, rgba(108,194,176,.09), transparent 70%);
+  background: radial-gradient(600px 300px at 85% 0%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 70%);
 }
 .hero-top { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 36px; align-items: center; position: relative; }
 .hero-copy { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
 .hero-tag { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 5px 12px 5px 10px; border: 1px solid var(--line-2); border-radius: 99px; font: 500 11.5px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .hero h2 { font-size: clamp(42px, 6.2vw, 76px); line-height: .98; font-weight: 800; letter-spacing: -0.03em; }
 .hero h2 .soft { color: var(--muted); font-weight: 600; }
-.hero .pitch { margin: 0; font-size: 16.5px; line-height: 1.6; color: #c3cad4; max-width: 52ch; }
+.hero .pitch { margin: 0; font-size: 16.5px; line-height: 1.6; color: var(--ink-2); max-width: 52ch; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.hero-chart { position: relative; border: 1px solid var(--line); border-radius: 12px; background: rgba(10,14,19,.55); padding: 14px 16px 10px; min-width: 0; }
+.hero-chart { position: relative; border: 1px solid var(--line); border-radius: 12px; background: var(--chart-bg); padding: 14px 16px 10px; min-width: 0; }
 .hero-chart-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
 .hero-chart-head .big { font: 600 22px var(--f-mono); }
 .hero-chart svg { display: block; width: 100%; height: 150px; margin-top: 8px; overflow: visible; }
@@ -213,12 +231,12 @@ main {
 /* soft spotlight that follows the pointer */
 .paper-card::before, .post::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none;
-  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(108,194,176,.07), transparent 60%);
+  background: radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, var(--accent) 7%, transparent), transparent 60%);
   opacity: 0; transition: opacity .3s;
 }
 .paper-card:hover, .post:hover {
   transform: translateY(-3px); border-color: var(--line-2);
-  box-shadow: 0 22px 44px -26px rgba(0,0,0,.85), 0 0 0 1px rgba(108,194,176,.14);
+  box-shadow: 0 22px 44px -26px var(--shadow), 0 0 0 1px color-mix(in srgb, var(--accent) 14%, transparent);
 }
 .paper-card:hover::before, .post:hover::before { opacity: 1; }
 .paper-card {
@@ -227,9 +245,9 @@ main {
 }
 .paper-card .body { display: flex; flex-direction: column; gap: 11px; min-width: 0; }
 .paper-card h3 { font-size: 21px; line-height: 1.25; font-weight: 700; }
-.paper-card .headline { margin: 0; color: #c3cad4; }
+.paper-card .headline { margin: 0; color: var(--ink-2); }
 .paper-card .meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-.paper-card .meta span:first-child { color: var(--accent); border: 1px solid rgba(108,194,176,.35); border-radius: 5px; padding: 1px 7px; }
+.paper-card .meta span:first-child { color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 5px; padding: 1px 7px; }
 .paper-card .meta span + span::before { content: "·"; margin-right: 10px; color: var(--line-2); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag { font-size: 12px; color: var(--muted); background: var(--bg-2); border: 1px solid var(--line); border-radius: 5px; padding: 1px 8px; }
@@ -243,7 +261,7 @@ main {
   border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink);
   transition: transform .2s var(--ease), background .2s, border-color .2s, color .2s, box-shadow .2s;
 }
-.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -10px rgba(108,194,176,.7); }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -10px color-mix(in srgb, var(--accent) 70%, transparent); }
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
 .btn.ghost:hover { border-color: var(--accent); color: var(--accent); box-shadow: none; }
 .btn .arr { transition: transform .2s var(--ease); }
@@ -271,7 +289,7 @@ main {
 .search ul {
   position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 6px); margin: 0; padding: 6px;
   list-style: none; background: var(--surface-2); border: 1px solid var(--line-2); border-radius: 10px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.5); max-height: 360px; overflow-y: auto;
+  box-shadow: 0 16px 40px -12px var(--shadow); max-height: 360px; overflow-y: auto;
 }
 .search li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 7px; cursor: pointer; font-size: 14px; }
 .search li[aria-selected="true"], .search li:hover { background: var(--accent-soft); }
@@ -295,7 +313,7 @@ main {
 .site-cta {
   position: relative; overflow: hidden;
   display: flex; justify-content: space-between; align-items: center; gap: 14px 20px; flex-wrap: wrap;
-  padding: 22px 24px; border-radius: var(--radius); border: 1px solid rgba(108,194,176,.3);
+  padding: 22px 24px; border-radius: var(--radius); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
   background: linear-gradient(120deg, var(--accent-soft), var(--surface) 70%);
 }
 .site-cta > div { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
@@ -314,7 +332,7 @@ main {
   padding: 20px 24px; border-radius: var(--radius); border: 1px solid var(--line);
   background: linear-gradient(120deg, var(--gold-soft), var(--surface) 65%);
 }
-.substack-head p { margin: 0; max-width: 62ch; font-size: 14.5px; color: #c3cad4; }
+.substack-head p { margin: 0; max-width: 62ch; font-size: 14.5px; color: var(--ink-2); }
 .substack-head b { color: var(--ink); }
 .posts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .post {
@@ -373,7 +391,7 @@ main {
 .factsheet div + div { border-top: 1px solid var(--line); }
 .factsheet dt { font: 500 11.5px/1.6 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .factsheet dd { margin: 0; font-size: 14px; }
-.abstract { margin: 0; color: #b9c1cc; font-size: 15px; max-width: 72ch; line-height: 1.7; }
+.abstract { margin: 0; color: var(--ink-2); font-size: 15px; max-width: 72ch; line-height: 1.7; }
 
 .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px; }
 .chart { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
@@ -384,9 +402,9 @@ main {
 .bar-row .lbl { color: var(--ink); line-height: 1.25; }
 .bar-row .val { font: 500 12.5px var(--f-mono); text-align: right; font-variant-numeric: tabular-nums; }
 .track { position: relative; height: 14px; background: var(--bg-2); border-radius: 4px; }
-.fill { position: absolute; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(90deg, rgba(108,194,176,.55), var(--accent)); transform-origin: left center; }
-.fill.s1 { background: linear-gradient(90deg, rgba(214,169,92,.55), var(--gold)); }
-.fill.neg { background: linear-gradient(270deg, rgba(224,138,127,.55), var(--neg)); transform-origin: right center; }
+.fill { position: absolute; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 55%, transparent), var(--accent)); transform-origin: left center; }
+.fill.s1 { background: linear-gradient(90deg, color-mix(in srgb, var(--gold) 55%, transparent), var(--gold)); }
+.fill.neg { background: linear-gradient(270deg, color-mix(in srgb, var(--neg) 55%, transparent), var(--neg)); transform-origin: right center; }
 .zero { position: absolute; top: -3px; bottom: -3px; width: 1px; background: var(--muted); }
 .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); }
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--accent); }
@@ -476,7 +494,6 @@ main {
   .reader-frame { padding: 8px; }
 }
 @media (max-width: 520px) {
-  .ticker-label .full { display: none; }
   .bar-row { grid-template-columns: minmax(0, 1fr) 58px; }
   .bar-row .lbl { grid-column: 1 / -1; }
   .factsheet div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
@@ -484,11 +501,9 @@ main {
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
-  .ticker-viewport { overflow-x: auto; }
 }
 </style>
 
-<div class="ticker" id="ticker" role="region" aria-label="Latest market close"></div>
 <div class="shell">
   <aside class="rail" id="rail"></aside>
   <main id="main"></main>
@@ -523,7 +538,7 @@ main {
       </div>
       <div class="roles">
         ${p.roles.map((r) => `<span>${esc(r)}</span>`).join("")}
-        <span>${esc(p.institution)}</span>
+        ${p.institution ? `<span>${esc(p.institution)}</span>` : ""}
       </div>
       <div class="chips">${p.focus.map((f) => `<span class="chip">${esc(f)}</span>`).join("")}</div>
       <nav class="nav" aria-label="Sections">
@@ -533,11 +548,23 @@ main {
         ${more ? `<button data-go="more">More <span class="count">${more}</span></button>` : ""}
       </nav>
       <div class="contact">
-        <span class="eyebrow">Contact</span>
+        <div class="contact-head"><span class="eyebrow">Contact</span>
+          <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch between light and dark">
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a6.8 6.8 0 0 0 10.7 10.7z"/></svg>
+          </button>
+        </div>
         ${p.email ? `<div class="contact-row"><span class="email" id="email">${esc(p.email)}</span><button class="copy" id="copy-email" type="button">Copy</button></div>` : ""}
         <div class="links">${(p.links || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>
         <span class="loc">${esc(p.location)}</span>
       </div>`;
+    $("#theme-btn").addEventListener("click", () => {
+      const cur = document.documentElement.dataset.theme
+        || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      const next = cur === "light" ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
     const copyBtn = $("#copy-email");
     if (copyBtn) copyBtn.addEventListener("click", () => {
       const done = () => { copyBtn.textContent = "Copied"; setTimeout(() => (copyBtn.textContent = "Copy"), 1600); };
@@ -1121,7 +1148,7 @@ main {
     }
   }
 
-  /* ---------- Market data from Market Matters (ticker + hero line) ---------- */
+  /* ---------- Market data from Market Matters (hero line) ---------- */
   let marketP;
   function marketData() {
     const m = S.market;
@@ -1134,30 +1161,6 @@ main {
   const toneOf = (p) => (p == null || Math.abs(p) < 0.005 ? "flat" : p > 0 ? "up" : "down");
   const numTxt = (x, d = 2) => Number(x).toLocaleString("en-IN", { minimumFractionDigits: d, maximumFractionDigits: d });
   const shortDay = (d) => new Date(d + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short" });
-
-  function renderTicker() {
-    const el = $("#ticker"), m = S.market || {};
-    const paint = (label, href, items) => {
-      const row = items.map((i) => `<span class="ticker-item"><span class="n">${esc(i.n)}</span><span class="v num">${esc(i.v)}</span>${i.p != null ? `<span class="num ${i.t || toneOf(i.p)}">${i.p > 0 ? "▲" : i.p < 0 ? "▼" : "■"} ${pctTxt(i.p)}</span>` : ""}</span>`).join("");
-      el.innerHTML = `
-        ${href ? `<a class="ticker-label" href="${esc(href)}" target="_blank" rel="noopener">` : `<span class="ticker-label">`}<span class="live-dot" aria-hidden="true"></span>${label}${href ? "</a>" : "</span>"}
-        <div class="ticker-viewport"><div class="ticker-track" style="--dur:${Math.max(30, items.length * 5)}s">${row}<span aria-hidden="true" style="display:contents">${row}</span></div></div>`;
-    };
-    // until the data arrives (or if it can't), show headline numbers from the research
-    const own = [...S.papers, ...(S.projects || [])].flatMap((p) => (p.stats || []).slice(0, 1).map((s) => ({ n: p.shortTitle || p.title, v: `${s.value} ${s.label}` })));
-    paint(`<span class="full">Research&nbsp;</span>highlights`, null, own);
-    marketData().then((d) => {
-      const pick = (arr, names) => names.map((n) => (arr || []).find((x) => x.name === n)).filter(Boolean);
-      const items = [
-        ...pick(d.indices, ["Nifty 50", "Sensex", "Nifty Bank", "Nifty Midcap 50", "India VIX"]).map((x) => ({ n: x.name, v: numTxt(x.last), p: x.pct, t: x.key === "vix" ? "flat" : null })),
-        ...pick(d.global, ["S&P 500", "Nasdaq", "Nikkei 225", "Hang Seng"]).map((x) => ({ n: x.name, v: numTxt(x.last), p: x.pct })),
-        ...pick(d.macro, ["Brent crude", "Gold", "Silver"]).map((x) => ({ n: x.name, v: "$" + numTxt(x.last), p: x.pct })),
-        ...pick(d.macro, ["US dollar in rupees"]).map((x) => ({ n: "USD/INR", v: "₹" + numTxt(x.last), p: x.pct, t: toneOf(-x.pct) })),
-        ...pick(d.macro, ["US 10-year yield"]).map((x) => ({ n: "US 10Y", v: numTxt(x.last) + "%", p: null })),
-      ];
-      if (items.length) paint(`<span class="full">Market close&nbsp;·&nbsp;</span>${esc(shortDay(d.market_date))}`, m.url, items);
-    }).catch(() => {});
-  }
 
   function heroHTML() {
     const p = S.profile, P = S.projects || [];
@@ -1214,7 +1217,7 @@ main {
           <span><span class="big num">${numTxt(nifty.last)}</span> <span class="num ${toneOf(nifty.pct)}">${pctTxt(nifty.pct)}</span></span>
         </div>
         <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Nifty 50 closing prices over the last ${v.length} sessions, ${up ? "up" : "down"} ${Math.abs(chg).toFixed(1)}%">
-          <defs><linearGradient id="heroFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#6cc2b0" stop-opacity=".28"/><stop offset="1" stop-color="#6cc2b0" stop-opacity="0"/></linearGradient></defs>
+          <defs><linearGradient id="heroFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" style="stop-color:var(--accent)" stop-opacity=".28"/><stop offset="1" style="stop-color:var(--accent)" stop-opacity="0"/></linearGradient></defs>
           <line class="gridline" x1="0" x2="${W}" y1="${H * .25}" y2="${H * .25}"/><line class="gridline" x1="0" x2="${W}" y1="${H * .5}" y2="${H * .5}"/><line class="gridline" x1="0" x2="${W}" y1="${H * .75}" y2="${H * .75}"/>
           <path class="area" d="${line} L${W} ${H} L0 ${H} Z"/>
           <path class="line" d="${line}" pathLength="1"/>
@@ -1312,7 +1315,6 @@ main {
   }
   window.addEventListener("hashchange", route);
   renderRail();
-  renderTicker();
   route();
 })();
 </script>
