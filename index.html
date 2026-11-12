@@ -195,6 +195,14 @@ main {
 .covered .cols { columns: 3 220px; margin-top: 10px; }
 .covered .cols div { break-inside: avoid; padding: 2px 0; }
 .covered .skip { margin-top: 10px; }
+.site-cta {
+  display: flex; justify-content: space-between; align-items: center; gap: 14px 20px; flex-wrap: wrap;
+  padding: 18px 22px; border-radius: var(--radius); background: var(--accent-soft); border: 1px solid var(--line);
+}
+.site-cta > div { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.site-host { font: 500 15px var(--f-mono); color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.site-host:hover { color: var(--accent); text-decoration: underline; }
+.btn.big { padding: 11px 20px; font-size: 15px; }
 .demo fin-spider { display: block; --fs-font: var(--f-body); --fs-mono: var(--f-mono); }
 .source-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
 .source-list li { display: grid; grid-template-columns: 10px minmax(0, 1fr); gap: 12px; }
@@ -445,7 +453,10 @@ main {
           <p class="headline">${esc(p.headline)}</p>
           <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
           <div class="card-actions">
-            <button class="btn" type="button" data-open="${esc(p.id)}">Key findings &amp; live demo</button>
+            ${p.site ? `
+            <a class="btn" href="${esc(p.site.url)}" target="_blank" rel="noopener">${esc(p.site.label || "Open the site")} ↗</a>
+            <button class="btn ghost" type="button" data-open="${esc(p.id)}">Overview</button>` : `
+            <button class="btn" type="button" data-open="${esc(p.id)}">Key findings &amp; live demo</button>`}
           </div>
         </div>
         <div class="card-stats">
@@ -619,7 +630,7 @@ main {
 
         <div class="two-col">
           <section class="block">
-            <h3>Key findings</h3>
+            <h3>${esc(p.findingsTitle || "Key findings")}</h3>
             <ul class="findings">${p.findings.map((f) => `<li><span>${esc(f)}</span></li>`).join("")}</ul>
           </section>
           <section class="block">
@@ -678,6 +689,15 @@ main {
           ${p.stats.map((s) => `<div><strong class="num">${esc(s.value)}</strong><span>${esc(s.label)}</span></div>`).join("")}
         </div>
 
+        ${p.site ? `
+        <section class="site-cta" aria-label="Live site">
+          <div>
+            <span class="eyebrow">Live site · updates itself</span>
+            <a class="site-host" href="${esc(p.site.url)}" target="_blank" rel="noopener">${esc(p.site.host || p.site.url)}</a>
+          </div>
+          <a class="btn big" href="${esc(p.site.url)}" target="_blank" rel="noopener">${esc(p.site.label || "Open the site")} ↗</a>
+        </section>` : ""}
+
         ${d ? `
         <section class="block demo" id="demo">
           <div class="demo-bar"><h3>${esc(d.heading || "Try it on any company")}</h3></div>
@@ -701,7 +721,7 @@ main {
 
         <div class="two-col">
           <section class="block">
-            <h3>Key findings</h3>
+            <h3>${esc(p.findingsTitle || "Key findings")}</h3>
             <ul class="findings">${p.findings.map((f) => `<li><span>${esc(f)}</span></li>`).join("")}</ul>
           </section>
           <section class="block">

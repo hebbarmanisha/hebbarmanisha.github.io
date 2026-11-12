@@ -273,53 +273,48 @@ window.SITE = {
 
     {
       id: "market-matter",
-      title: "Inverika Market Matter: An Automated Daily Sweep of the Indian Stock Market",
-      shortTitle: "Inverika Market Matter",
+      title: "Inverika Market Matters: A Live Dashboard of the Indian Stock Market",
+      shortTitle: "Inverika Market Matters",
       kind: "Project",
       date: "November 2026",
       area: "Market research",
       authors: ["Manisha Hebbar"],
-      question: "Can the day's Indian market move be summarised and explained automatically every evening, with every claim tied to a number or a headline?",
-      headline: "A Python sweep built for Inverika that runs every weekday after the NSE close. It pulls 77 indices, stocks and commodities plus the day's headlines from six news sources, works out what moved the market, and publishes the result on this page automatically.",
-      abstract: "Inverika Market Matter is a daily market sweep built for Inverika. A scheduled GitHub Action runs it every weekday at 16:45 IST, after the NSE close. It collects the Nifty 50, Sensex, Nifty Bank, Midcap and India VIX, 11 sector indices, all 50 Nifty stocks, the previous US session, Asian and European markets, crude, gold, silver, the rupee, the US 10-year yield and the dollar index. It also reads the day's market headlines from Economic Times, Mint, Business Standard, Hindu BusinessLine and Google News. Each signal that moved beyond a fixed threshold becomes a driver, such as sector leadership, market breadth, big stock moves, global cues, oil, gold, the rupee, US yields, volatility or foreign-flow news. Each driver states its numbers, why it matters for Indian stocks, and the headlines that mention it. The page below shows the newest sweep, and every past sweep is kept for the archive. Drivers describe what moved alongside the market; they are not proof of cause. This is a research tool, not investment advice.",
+      site: {
+        url: "https://inverikacapital.github.io/market-matter/",
+        label: "Open Market Matters",
+        host: "inverikacapital.github.io/market-matter"
+      },
+      question: "Can one page tell an investor, in a minute, what the Indian market did today, why, and what tomorrow might look like, and keep itself up to date with no one touching it?",
+      headline: "A live market dashboard built for Inverika Capital. It tracks all Nifty 500 stocks, Indian and global indices, sectors, FII/DII flows, currencies and commodities. It updates itself every 15 minutes while the NSE is open, writes a 60-second summary of the day, and makes a next-session outlook that is graded every day.",
+      abstract: "Market Matters is Inverika Capital's daily view of the Indian stock market, India first and global next. It opens with the Nifty 500 and seven other Indian indices, with a chart and performance from one day to one year. A plain-language 'Day in 60 seconds' summary follows. The page then shows a next-session outlook, a sector heatmap, large vs mid vs small caps, the top movers and volume spikes across all 500 stocks, a 100-stock heatmap, FII/DII cash-market flows from NSE, 14 global markets, currencies, commodities, bonds and crypto, and the day's India and global headlines. It refreshes automatically: at 8:00 AM IST with global cues before the open, about every 15 minutes during market hours (9:15 AM to 3:30 PM), and at 4:15 PM with settled closing data. It is informational only and not investment advice.",
       stats: [
-        { value: "77", label: "indices, stocks, commodities and currencies read every trading day" },
-        { value: "6", label: "Indian and global news sources scanned for the day's market headlines" },
-        { value: "16:45", label: "IST, Monday to Friday: the sweep runs and publishes itself after the close" },
-        { value: "9", label: "kinds of market driver it checks, each with a fixed, published threshold" }
+        { value: "500", label: "Nifty 500 stocks tracked, split into large, mid and small caps" },
+        { value: "15 min", label: "refresh interval while the NSE is open, with no one updating it by hand" },
+        { value: "51", label: "Indian indices, sectors, global markets, currencies, commodities and crypto on one page" },
+        { value: "Daily", label: "next-session outlook, graded the following day in a public track record" }
       ],
+      findingsTitle: "What the site does",
       findings: [
-        "On its first run (12 Nov 2026) the sweep caught a narrow rally. The Nifty 50 rose 0.18% even though 30 of its 50 stocks fell, because Realty (+4.51%), PSU banks (+1.51%) and financial services (+1.42%) did the lifting. It matched that move to the same evening's market-close reports.",
-        "Timing matters for global cues. US markets close after India, so the sweep reads the previous US session (S&P 500 +1.31% that night). It also leaves out Asian markets whose close for the day isn't published yet, so it never mixes stale or later data into the explanation.",
-        "Headlines only count if they appeared around the session. Without that rule, reports of the next US session's sell-off were being attached to India's day.",
-        "Keyword matching needs whole words and care. Early versions matched 'oil' inside other words, tied an SBI Mutual Fund ETF launch to the banking story, and picked up a craft blog's 'nifty' cube books from Google News. Each of these is now filtered out.",
-        "Exact FII/DII flow figures aren't available from a public feed. So the sweep reports foreign-investor flows only when the day's headlines mention them, rather than guessing a number."
+        "Writes 'The day in 60 seconds' itself. On 12 Nov 2026 it reported the Nifty 500 up 0.36%, small caps (+1.10%) beating large caps (+0.14%), Realty leading (+4.51%) and Auto lagging (−1.02%).",
+        "Makes a next-session outlook from trend, momentum (RSI, MACD), India VIX, global cues, the rupee, crude and breadth. The outlook gives a call (bullish to bearish), an expected Nifty 500 range with about 68% probability, and support and resistance levels. Every call is graded the next day on the page.",
+        "Shows real institutional flows. FII and DII buying and selling come from NSE's provisional data each evening (on 12 Nov, FIIs were net buyers of ₹7,831 crore and DIIs net sellers of ₹6,331 crore), and the page builds a day-by-day history.",
+        "Looks past the headline index. It ranks gainers, losers and volume spikes against the 20-day average across all 500 stocks, filtered by large, mid or small cap. On 12 Nov, Avanti Feeds traded at 63 times its usual volume.",
+        "Puts India in global context: the US (with live futures), Europe and Asia; the rupee against four currencies; crude, gold, silver, natural gas and copper; the US 10-year yield and crypto."
       ],
       method: [
-        { label: "Prices", value: "Yahoo Finance: NSE and BSE indices, 11 sector indices, all Nifty 50 stocks, global indices, futures and FX" },
-        { label: "News", value: "Economic Times, Mint, Business Standard, Hindu BusinessLine RSS feeds and a Google News search, last 30 hours" },
-        { label: "Drivers", value: "Breadth, sector leaders, stock moves of 3%+, global cues (0.5%+), Brent (1%+), gold (1.5%+), rupee (0.2%+), US yields (5 bps+), India VIX (4%+), foreign-flow news" },
-        { label: "Schedule", value: "GitHub Action, Monday to Friday at 16:45 IST; publishes the latest sweep and keeps an archive of past days" },
-        { label: "Built with", value: "Python (pandas, yfinance, requests) and a custom web component for this page" }
+        { label: "Data", value: "Yahoo Finance (prices); NSE India (FII/DII flows); Economic Times, Mint, Business Standard and CNBC (headlines)" },
+        { label: "Schedule", value: "8:00 AM IST pre-open, about every 15 min from 9:15 AM to 3:30 PM, and 4:15 PM with settled closing data; trading days only" },
+        { label: "Outlook", value: "Rules-based: trend vs 20 and 50-day averages, RSI 14, MACD, India VIX, global cues, rupee, crude and breadth; range from a ±1σ move" },
+        { label: "Hosting", value: "GitHub Pages, refreshed by scheduled GitHub Actions; the page itself checks for new data every 2 minutes during market hours" },
+        { label: "Built with", value: "Python for the data pipeline; HTML, CSS and JavaScript for the dashboard" }
       ],
-      demo: {
-        heading: "The latest sweep",
-        // Loaded live from Inverika's GitHub Pages site (github.com/inverikacapital/market-matter).
-        // ?v= forces browsers to fetch the new file after an update; bump it when it changes
-        script: "https://inverikacapital.github.io/market-matter/market-matter.js?v=1",
-        tag: "market-matter",
-        attrs: { src: "https://inverikacapital.github.io/market-matter/data/latest.json", archive: "https://inverikacapital.github.io/market-matter/data/index.json" },
-        caption: "This updates by itself every weekday evening. Use Past sweeps to open an earlier day. Every headline links to the original article."
-      },
       sources: [
-        { label: "Market data: Yahoo Finance", url: "https://finance.yahoo.com/" },
-        { label: "News: Economic Times Markets", url: "https://economictimes.indiatimes.com/markets" },
-        { label: "News: Mint Markets", url: "https://www.livemint.com/market" },
-        { label: "News: Business Standard Markets", url: "https://www.business-standard.com/markets" },
-        { label: "News: Hindu BusinessLine Markets", url: "https://www.thehindubusinessline.com/markets/" },
-        { label: "Source code: the sweep and its daily schedule", url: "https://github.com/inverikacapital/market-matter" }
+        { label: "Live site: Inverika Market Matters", url: "https://inverikacapital.github.io/market-matter/" },
+        { label: "Source code on GitHub", url: "https://github.com/inverikacapital/market-matter" },
+        { label: "Prices: Yahoo Finance", url: "https://finance.yahoo.com/" },
+        { label: "FII/DII flows: NSE India", url: "https://www.nseindia.com/" }
       ],
-      tags: ["Python", "Automation", "Market analysis", "News analysis", "GitHub Actions", "Data visualisation"]
+      tags: ["Python", "Automation", "Live dashboard", "Market analysis", "GitHub Actions", "Data visualisation"]
     }
   ],
 
