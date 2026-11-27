@@ -335,6 +335,13 @@ window.SITE = {
   // Newest first. Date format: YYYY-MM-DD
   writing: [
     {
+      title: "Derivatives Decoded: What are Futures and Options? The Good and The Bad.",
+      subtitle: "It isn't that complicated, and we use it in real life more than we realise.",
+      date: "2026-11-27",
+      url: "https://manishahebbar.substack.com/p/derivatives-decoded-what-are-futures",
+      topic: "Derivatives"
+    },
+    {
       title: "Beyond Mutual Funds: What Is an SIF, and Is It Right for You?",
       subtitle: "A simple guide to the investment options sitting between your mutual fund and the big leagues.",
       date: "2026-10-09",
